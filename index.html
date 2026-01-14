@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="de" translate="no">
+
+<head>
+
+  <!-- FF Pro Universal Tag -->
+  <script>
+    ! function (f, l, u, x, j, s, a, b) {
+      window.flux || (j = "undefined" != typeof fluxOptions ? fluxOptions : {}, s = "undefined" != typeof fluxDefaults ? fluxDefaults : {}, (a = l.createElement("script")).src = "https://" + u + "/integration/lumetricv2.min.js?v=" + x, a.type = "text/javascript", a.async = "true", queue = [], window.flux = {
+        track: function () {
+          queue.push(arguments)
+        }
+      }, a.onload = a.onreadystatechange = function () {
+        var rs = this.readyState;
+        if (!rs || "complete" == rs || "loaded" == rs) try {
+          for (window.flux = new Lumetric(u, x, j, s); 0 != queue.length;) {
+            var args = queue.pop();
+            window.flux.track.apply(null, args)
+          }
+        } catch (e) { }
+      }, (b = document.getElementsByTagName("script")[0]).parentNode.insertBefore(a, b))
+    }(window, document, "go.smartfinanceplaan.com", "3.3.0");
+  </script>
+  <!-- FF Pro View Event -->
+  <script>
+    flux.track("view")
+  </script>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>KI-Handelsplattform-Vergleich</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: '#0D9488',
+            dark: '#0a0a0a',
+            light: '#f5f5f5',
+            deep: '#0c1445',
+            midnight: '#020617',
+            slate: '#0f172a',
+            profit: '#10B981'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1e3a8a 50%, #0c1445 100%);
+    }
+
+    .card-gradient {
+      background: linear-gradient(145deg, rgba(10, 10, 10, 0.9) 0%, rgba(2, 2, 2, 0.98) 100%);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(13, 148, 136, 0.15);
+    }
+
+    .glow {
+      box-shadow: 0 0 25px rgba(13, 148, 136, 0.5);
+    }
+
+    .feature-icon {
+      background: linear-gradient(135deg, #0D9488 0%, #10B981 100%);
+    }
+
+    .teal-glow {
+      box-shadow: 0 0 15px rgba(13, 148, 136, 0.4);
+    }
+
+    .diagonal-gradient {
+      background: linear-gradient(120deg, #0c1445 0%, #020617 100%);
+    }
+
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .teal-text {
+      background: linear-gradient(to right, #0D9488, #10B981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-glow {
+      text-shadow: 0 0 10px rgba(13, 148, 136, 0.7);
+    }
+
+    .pulse-glow {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(13, 148, 136, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(13, 148, 136, 0);
+      }
+    }
+
+    .profit-green {
+      color: #10B981;
+    }
+
+    .bullet {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .chev {
+      width: 20px;
+      height: 20px;
+      background-color: #0D9488;
+      border-radius: 50%;
+      margin-right: 10px;
+      position: relative;
+    }
+
+    .chev:after {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 5px;
+      width: 5px;
+      height: 5px;
+      border-right: 2px solid white;
+      border-bottom: 2px solid white;
+      transform: rotate(-45deg);
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-midnight text-light">
+  <!-- Notice Bar -->
+  <div class="bg-red-600 text-white text-center py-2 font-bold text-sm md:text-base animate-pulse">
+    ⚠️ ACHTUNG: Nur noch 7 freie Plätze für Nutzer in Deutschland verfügbar.
+  </div>
+  <!-- Hero Section -->
+  <section class="gradient-bg relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-teal rounded-full filter blur-3xl opacity-25"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-green-500 rounded-full filter blur-3xl opacity-15"></div>
+    </div>
+    <div class="container mx-auto px-4 py-24 relative z-10">
+      <div class="max-w-5xl mx-auto text-center">
+        <div
+          class="inline-block mb-6 px-6 py-3 bg-gradient-to-r from-teal to-green-600 rounded-full shadow-lg shadow-teal/30 hover:scale-105 transition-transform duration-300">
+          <span class="text-white font-bold tracking-wider flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+            OFFIZIELLE VERIFIZIERTE ANMELDUNG 2026
+          </span>
+        </div>
+        <h1 class="text-6xl md:text-7xl font-extrabold mb-8 leading-tight">
+          Aktivieren Sie Ihren Zugang zu <span id="dynamic-brand">Immediate Edge</span>
+        </h1>
+        <p class="text-xl text-gray-300 mb-14 max-w-3xl mx-auto leading-relaxed"> Der Zugang für neue Nutzer aus
+          Deutschland ist derzeit offen. Sichern Sie sich die KI-gesteuerte Technologie von <span
+            id="dynamic-brand">Immediate Edge</span> und starten Sie Ihre Handelsreise noch heute. </p>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-16">
+          <div
+            class="flex flex-col items-center text-center p-5 card-gradient rounded-2xl hover-lift border border-teal border-opacity-20 transition-all duration-300">
+            <div class="feature-icon w-14 h-14 rounded-full flex items-center justify-center mb-4">
+              <svg class="h-7 w-7 text-dark" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </div>
+            <span class="text-gray-300 text-sm font-medium">Keine Kommission</span>
+          </div>
+          <div
+            class="flex flex-col items-center text-center p-5 card-gradient rounded-2xl hover-lift border border-teal border-opacity-20 transition-all duration-300">
+            <div class="feature-icon w-14 h-14 rounded-full flex items-center justify-center mb-4">
+              <svg class="h-7 w-7 text-dark" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </div>
+            <span class="text-gray-300 text-sm font-medium">Anfängerfreundlich</span>
+          </div>
+          <div
+            class="flex flex-col items-center text-center p-5 card-gradient rounded-2xl hover-lift border border-teal border-opacity-20 transition-all duration-300">
+            <div class="feature-icon w-14 h-14 rounded-full flex items-center justify-center mb-4">
+              <svg class="h-7 w-7 text-dark" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </div>
+            <span class="text-gray-300 text-sm font-medium">24/7 Unterstützung</span>
+          </div>
+          <div
+            class="flex flex-col items-center text-center p-5 card-gradient rounded-2xl hover-lift border border-teal border-opacity-20 transition-all duration-300">
+            <div class="feature-icon w-14 h-14 rounded-full flex items-center justify-center mb-4">
+              <svg class="h-7 w-7 text-dark" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </div>
+            <span class="text-gray-300 text-sm font-medium">Sofortige Auszahlungen</span>
+          </div>
+          <div
+            class="flex flex-col items-center text-center p-5 card-gradient rounded-2xl hover-lift border border-teal border-opacity-20 transition-all duration-300">
+            <div class="feature-icon w-14 h-14 rounded-full flex items-center justify-center mb-4">
+              <svg class="h-7 w-7 text-dark" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"></path>
+              </svg>
+            </div>
+            <span class="text-gray-300 text-sm font-medium">Geringes Risiko</span>
+          </div>
+        </div>
+        <!-- Email Pass-through Form -->
+        <div class="max-w-xl mx-auto">
+          <form id="hero-email-form"
+            class="flex flex-col md:flex-row gap-4 p-2 bg-slate rounded-2xl border border-teal/30 shadow-2xl backdrop-blur-sm">
+            <input type="email" id="hero-email" placeholder="E-Mail-Adresse eingeben" required
+              class="flex-grow px-6 py-4 rounded-xl bg-white border border-teal/20 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-all">
+            <button type="submit"
+              class="glow bg-gradient-to-r from-teal to-green-500 text-dark font-bold py-4 px-8 rounded-xl text-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105 whitespace-nowrap">
+              JETZT STARTEN
+            </button>
+          </form>
+        </div>
+        <div class="mt-16 flex flex-col items-center">
+          <div class="flex mb-4">
+            <img alt="User" class="w-10 h-10 rounded-full border-2 border-teal -ml-2 first:ml-0" src="32.jpg" />
+            <img alt="User" class="w-10 h-10 rounded-full border-2 border-teal -ml-2 first:ml-0" src="44.jpg" />
+            <img alt="User" class="w-10 h-10 rounded-full border-2 border-teal -ml-2 first:ml-0" src="76.jpg" />
+            <img alt="User" class="w-10 h-10 rounded-full border-2 border-teal -ml-2 first:ml-0" src="68.jpg" />
+            <img alt="User" class="w-10 h-10 rounded-full border-2 border-teal -ml-2 first:ml-0" src="91.jpg" />
+          </div>
+          <div class="flex items-center">
+            <div class="flex text-yellow-500">
+              <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+              <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                </path>
+              </svg>
+            </div>
+            <span class="text-gray-300 font-medium">Verifiziertes Mitgliedersiegel: 4.9/5 von über 2.500 aktiven Tradern
+              bei <span id="dynamic-brand"></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Comparison Section (Compact 2 Columns + Icons) -->
+  <section class="py-16 bg-midnight">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-4"> Warum macht <span
+            class="teal-text dynamic-brand">Immediate Edge</span> den Unterschied? </h2>
+        <p class="text-gray-300 text-lg md:text-xl"> Ein schneller Vergleich mit traditionellen Investmentplattformen.
+        </p>
+      </div>
+      <div
+        class="max-w-3xl mx-auto bg-slate rounded-3xl border border-teal border-opacity-40 shadow-2xl overflow-hidden">
+        <!-- Header -->
+        <div class="grid grid-cols-2 text-center bg-slate-900 border-b border-slate-800 font-semibold text-base">
+          <div class="p-4 teal-text dynamic-brand">Immediate Edge</div>
+          <div class="p-4 text-gray-300">Andere Plattformen</div>
+        </div>
+        <!-- Row 1 -->
+        <div class="grid grid-cols-2 border-b border-slate-800 text-center bg-slate-950/60">
+          <div class="p-6">
+            <div class="flex flex-col items-center">
+              <svg class="w-8 h-8 text-teal mb-2" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p class="text-gray-300 text-sm md:text-base">
+                <strong>Intelligente Automatisierung</strong>
+                <br> Die KI führt Strategien aus, während Sie die Kontrolle behalten.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 text-gray-400 text-sm md:text-base">
+            <div class="flex flex-col items-center">
+              <svg class="w-8 h-8 text-gray-500 mb-2" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p>Manuelle Prozesse oder unklare Signale.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="grid grid-cols-2 border-b border-slate-800 text-center bg-slate-950/70">
+          <div class="p-6">
+            <div class="flex flex-col items-center">
+              <svg class="w-8 h-8 text-teal mb-2" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p class="text-gray-300 text-sm md:text-base">
+                <strong>Volle Transparenz</strong>
+                <br> Sehen Sie jeden Trade und pausieren Sie wann immer Sie wollen.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 text-gray-400 text-sm md:text-base">
+            <div class="flex flex-col items-center">
+              <svg class="w-8 h-8 text-gray-500 mb-2" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p>Automatische Trades ohne die eigentliche Logik zu zeigen.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Row 3 -->
+        <div class="grid grid-cols-2 border-b border-slate-800 text-center bg-slate-950/60">
+          <div class="p-6">
+            <div class="flex flex-col items-center">
+              <svg class="w-8 h-8 text-teal mb-2" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p class="text-gray-300 text-sm md:text-base">
+                <strong>Ab 250 €* zugänglich</strong>
+                <br> Keine versteckten Gebühren oder unerwartete Kosten.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 text-gray-400 text-sm md:text-base">
+            <div class="flex flex-col items-center">
+              <svg class="w-8 h-8 text-gray-500 mb-2" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p>Höhere Einzahlungen und länderspezifische variable Kosten.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Row 4 -->
+        <div class="grid grid-cols-2 text-center bg-slate-950/80">
+          <div class="p-6">
+            <div class="flex flex-col items-center">
+              <svg class="w-8 h-8 text-teal mb-2" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p class="text-gray-300 text-sm md:text-base">
+                <strong>24/7 Support</strong>
+                <br> Menschliche Unterstützung und kontinuierliches Schulungsmaterial.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 text-gray-400 text-sm md:text-base">
+            <div class="flex flex-col items-center">
+              <svg class="w-8 h-8 text-gray-500 mb-2" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14V9a6 6 0 00-12 0v5c0 .538-.214 1.055-.595 1.595L4 17h5m6 0v1a3 3 0 11-6 0v-1" />
+              </svg>
+              <p>Eingeschränkter Support oder automatisierte Bots.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-500 text-xs mt-4 max-w-2xl mx-auto text-center"> *Beträge können je nach zugehörigem Broker
+        und Ihrem Wohnsitzland variieren. </p>
+      <div class="text-center mt-8">
+        <a href="https://go.smartfinanceplaan.com/action/3Tqc5F5rwBm1/3Tqc5F7JOTzL/30" target="_blank"
+          rel="noopener noreferrer">
+          <button
+            class="glow bg-gradient-to-r from-teal to-green-500 text-dark font-bold py-4 px-10 rounded-xl text-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+            Jetzt vergleichen </button>
+        </a>
+        <p class="text-gray-500 text-xs mt-3"> Informationsvergleich. Stellt keine Finanzberatung dar. </p>
+      </div>
+    </div>
+  </section>
+  <!-- Performance Simulator -->
+  <section class="py-24 diagonal-gradient">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div
+          class="calc__card bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 rounded-3xl p-10 shadow-2xl border-2 border-teal border-opacity-30 teal-glow relative overflow-hidden">
+          <!-- Efecto de fondo más destacado -->
+          <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-72 h-72 bg-teal rounded-full filter blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-56 h-56 bg-green-400 rounded-full filter blur-3xl"></div>
+          </div>
+          <div class="relative z-10">
+            <h2 class="calc__title text-4xl md:text-6xl font-bold mb-10 text-center">
+              <span class="line1 block bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
+                Entdecken Sie Ihr Potenzial: Passen Sie die Investition an und sehen Sie, wie sie wachsen könnte.
+              </span>
+              <span class="line2 block mt-2"></span>
+            </h2>
+            <div class="calc__grid grid grid-cols-1 lg:grid-cols-3 gap-12">
+              <!-- Left: controls -->
+              <div class="calc__form lg:col-span-2">
+                <div class="field mb-12">
+                  <div class="flex justify-between mb-4">
+                    <label class="text-gray-100 font-semibold text-lg" for="amount">Investitionsbetrag:</label>
+                    <span
+                      class="text-white font-bold text-xl bg-teal bg-opacity-20 px-4 py-2 rounded-full border border-teal border-opacity-30"
+                      id="amountValue">250 €</span>
+                  </div>
+                  <input
+                    class="range w-full h-3 bg-slate-700 border-2 border-teal rounded-xl appearance-none cursor-pointer slider-glow"
+                    id="amount" max="1000000" min="250" step="50" type="range" value="250" />
+                  <div class="ticks flex justify-between text-gray-200 text-sm mt-3 font-semibold">
+                    <span class="bg-slate-700 px-2 py-1 rounded">250 €</span>
+                    <span class="bg-slate-700 px-2 py-1 rounded">250 000 €</span>
+                    <span class="bg-slate-700 px-2 py-1 rounded">500 000 €</span>
+                    <span class="bg-slate-700 px-2 py-1 rounded">750 000 €</span>
+                    <span class="bg-slate-700 px-2 py-1 rounded">1 Mio. €</span>
+                  </div>
+                </div>
+                <div class="field mb-12">
+                  <div class="flex justify-between mb-4">
+                    <label class="text-gray-100 font-semibold text-lg" for="days">Handelszeitraum (Tage):</label>
+                    <span
+                      class="text-white font-bold text-xl bg-teal bg-opacity-20 px-4 py-2 rounded-full border border-teal border-opacity-30"
+                      id="daysValue">10 Tage</span>
+                  </div>
+                  <input
+                    class="range w-full h-3 bg-slate-700 border-2 border-teal rounded-xl appearance-none cursor-pointer slider-glow"
+                    id="days" max="50" min="10" step="1" type="range" value="10" />
+                  <div class="ticks flex justify-between text-gray-200 text-sm mt-3 font-semibold">
+                    <span class="bg-slate-700 px-2 py-1 rounded">10</span>
+                    <span class="bg-slate-700 px-2 py-1 rounded">20</span>
+                    <span class="bg-slate-700 px-2 py-1 rounded">30</span>
+                    <span class="bg-slate-700 px-2 py-1 rounded">40</span>
+                    <span class="bg-slate-700 px-2 py-1 rounded">50</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Right: output -->
+              <div aria-live="polite" class="calc__out flex flex-col justify-center" role="status">
+                <div
+                  class="bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-teal rounded-2xl p-8 text-center teal-glow relative overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-br from-teal-500 to-green-500 opacity-5"></div>
+                  <div class="relative z-10">
+                    <div class="out__label text-gray-300 mb-3 text-lg font-semibold tracking-wide">PROGNOSTIZIERTER
+                      GEWINN</div>
+                    <div class="out__money text-5xl font-black profit-green mb-3 drop-shadow-lg" id="profitOut">1.814 €
+                    </div>
+                    <div class="text-gray-400 font-medium mt-2" id="explain">Mit 250 € für 10 Tage</div>
+                    <div class="cta mt-8">
+                      <a href="https://go.smartfinanceplaan.com/action/3Tqc5F5rwBm1/3Tqc5F7JOTzL/30"
+                        rel="noopener noreferrer" target="_blank">
+                        <button
+                          class="w-full glow bg-gradient-to-r from-teal to-green-500 text-dark font-bold py-4 px-10 rounded-xl text-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-2xl border-2 border-white border-opacity-20">Diesen
+                          Gewinn reservieren</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>
+          .slider-glow {
+            box-shadow: 0 0 15px rgba(13, 148, 136, 0.4);
+          }
+
+          .slider-glow::-webkit-slider-thumb {
+            appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0D9488, #10B981);
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 0 15px rgba(13, 148, 136, 0.7);
+          }
+
+          .slider-glow::-moz-range-thumb {
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0D9488, #10B981);
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 0 15px rgba(13, 148, 136, 0.7);
+          }
+        </style>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ Section (to replace testimonials) -->
+  <section id="faq" class="py-16 bg-midnight">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-8"> Häufig gestellte Fragen </h2>
+      <p class="text-gray-300 text-center mb-10 text-lg"> Sie haben noch Fragen zu <span class="dynamic-brand">Immediate
+          Edge</span> und anderen KI-Handelsplattformen? Hier sind die häufigsten Fragen vor dem Start. </p>
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <details class="group bg-slate border border-slate-700 rounded-2xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 md:px-6 md:py-5">
+            <span class="font-semibold text-gray-100 text-sm md:text-base"> Warum ist <span
+                class="dynamic-brand">Immediate Edge</span> dieses Jahr auf Platz 1? </span>
+            <span
+              class="ml-4 flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-teal to-green-500 text-white shadow-md text-sm font-bold group-open:rotate-45 transition-transform">
+              + </span>
+          </summary>
+          <div class="px-5 py-5 md:p-6 text-sm md:text-base text-gray-300 border-t border-slate-700"> Unser
+            Ranking basiert auf einer internen Bewertung, die mehrere Schlüsselfaktoren betrachtet: <strong>KI- und
+              Automatisierungstools, Gesamtkosten, Sicherheit und Supportqualität</strong>. Basierend auf diesen
+            Kriterien erreichte <span class="dynamic-brand">Immediate Edge</span> die Spitzenposition in unserem
+            redaktionellen Vergleich für dieses Jahr. Dies garantiert keine Ergebnisse oder stellt eine persönliche
+            Anlageberatung dar. </div>
+        </details>
+        <!-- FAQ 2 -->
+        <details class="group bg-slate border border-slate-700 rounded-2xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 md:px-6 md:py-5">
+            <span class="font-semibold text-gray-100 text-sm md:text-base"> Ist die Mindesteinzahlung von 250 € wirklich
+              erforderlich? </span>
+            <span
+              class="ml-4 flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-teal to-green-500 text-white shadow-md text-sm font-bold group-open:rotate-45 transition-transform">
+              + </span>
+          </summary>
+          <div class="px-5 py-5 md:p-6 text-sm md:text-base text-gray-300 border-t border-slate-700">
+            Der typische Startbetrag liegt bei <strong>etwa 250 €</strong>, aber die genaue Mindesteinzahlung wird vom
+            Partnerbroker festgelegt und kann je nach Land und Kontotyp variieren. Sie sehen den endgültigen Betrag
+            und die Bedingungen immer direkt auf der offiziellen Seite des Brokers, bevor Sie sich für eine Einzahlung
+            entscheiden. </div>
+        </details>
+        <!-- FAQ 3 -->
+        <details class="group bg-slate border border-slate-700 rounded-2xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 md:px-6 md:py-5">
+            <span class="font-semibold text-gray-100 text-sm md:text-base"> Bieten Sie Finanzberatung an oder verwalten
+              Sie Gelder? </span>
+            <span
+              class="ml-4 flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-teal to-green-500 text-white shadow-md text-sm font-bold group-open:rotate-45 transition-transform">
+              + </span>
+          </summary>
+          <div class="px-5 py-5 md:p-6 text-sm md:text-base text-gray-300 border-t border-slate-700"> Nein. Wir
+            sind eine unabhängige <strong>Analyse- und Vergleichswebsite</strong>. Wir verwalten kein Geld, eröffnen
+            keine Konten in Ihrem Namen oder bieten persönliche Anlageberatung an. Unser Ziel ist es, Ihnen zu helfen,
+            die verfügbaren Tools zu verstehen, damit Sie Ihre eigene fundierte Entscheidung treffen können. </div>
+        </details>
+        <!-- FAQ 4 -->
+        <details class="group bg-slate border border-slate-700 rounded-2xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 md:px-6 md:py-5">
+            <span class="font-semibold text-gray-100 text-sm md:text-base"> Was bedeutet es, dass eine Plattform
+              „KI-bereit“ oder „KI-gestützt“ ist? </span>
+            <span
+              class="ml-4 flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-teal to-green-500 text-white shadow-md text-sm font-bold group-open:rotate-45 transition-transform">
+              + </span>
+          </summary>
+          <div class="px-5 py-5 md:p-6 text-sm md:text-base text-gray-300 border-t border-slate-700"> Das bedeutet,
+            dass der Broker oder die Plattform darauf vorbereitet ist, mit <strong>fortschrittlichen
+              Automatisierungstools</strong> zu arbeiten: algorithmische
+            Strategien, intelligentes Risikomanagement, schnellere Auftragsausführung und Dashboards, die Ihnen helfen,
+            schneller zu reagieren.
+            „KI-bereit“ bezieht sich auf die Infrastruktur und die Tools — es garantiert <strong>keine</strong> Gewinne.
+          </div>
+        </details>
+        <!-- FAQ 5 -->
+        <details class="group bg-slate border border-slate-700 rounded-2xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer px-5 py-4 md:px-6 md:py-5">
+            <span class="font-semibold text-gray-100 text-sm md:text-base"> Was passiert nach der Registrierung? </span>
+            <span
+              class="ml-4 flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-teal to-green-500 text-white shadow-md text-sm font-bold group-open:rotate-45 transition-transform">
+              + </span>
+          </summary>
+          <div class="px-5 py-5 md:p-6 text-sm md:text-base text-gray-300 border-t border-slate-700"> Nachdem Sie
+            Ihre grundlegenden Daten übermittelt haben, werden Sie normalerweise von einem
+            <strong>Partnerbroker</strong> kontaktiert oder weitergeleitet, um:
+            Ihr Profil zu vervollständigen, Ihre Identität zu verifizieren, falls erforderlich, und zu entscheiden, ob
+            Sie eine erste Einzahlung tätigen möchten.
+            Sie können jederzeit vor der Einzahlung abbrechen und jedes Angebot ablehnen, das Ihnen nicht zusagt.
+          </div>
+        </details>
+      </div>
+      <p class="text-xs text-gray-500 mt-8 text-center max-w-2xl mx-auto"> Die Informationen auf dieser Seite dienen nur
+        zu
+        Bildungs- und Vergleichszwecken und sollten nicht als Finanzberatung ausgelegt werden. Der Handel birgt
+        Risiken, und Sie sollten niemals Geld investieren, dessen Verlust Sie sich nicht leisten können. </p>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-midnight border-t border-gray-800 py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h3 class="text-5xl font-bold mb-6 teal-text">
+          <h3 class="text-5xl font-bold mb-8 teal-text dynamic-brand">Immediate Edge</h3>
+          <div class="flex flex-col items-center justify-center space-y-6">
+            <p class="text-gray-300 text-xl font-medium text-center max-w-2xl">
+              Übernehmen Sie die Kontrolle über Ihre Investitionen mit <span class="dynamic-brand">Immediate Edge</span>
+              — der KI-Plattform,
+              die Ihnen hilft, intelligenter zu vergleichen, zu testen und zu handeln. </p>
+            <a href="https://go.smartfinanceplaan.com/action/3Tqc5F5rwBm1/3Tqc5F7JOTzL/30" target="_blank"
+              rel="noopener noreferrer">
+              <button class="glow bg-gradient-to-r from-teal to-green-500 text-dark font-bold py-4 px-12 rounded-xl text-lg 
+      hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-2xl"> Jetzt kostenlosen Zugang
+                erhalten </button>
+            </a>
+            <p class="text-gray-500 text-sm mt-3"> Keine Kreditkarte erforderlich • Sichere Anmeldung •
+              Echtzeit-Vergleich </p>
+          </div>
+      </div>
+      <div class="border-t border-gray-700 mt-12 pt-10 text-center">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+          <div class="mb-6 md:mb-0">
+            <ul class="flex flex-wrap justify-center space-x-8">
+              <li>
+                <a class="text-gray-300 hover:text-teal transition-colors text-lg font-semibold"
+                  href="privacy-policy.html">Datenschutzrichtlinie</a>
+              </li>
+              <li>
+                <a class="text-gray-300 hover:text-teal transition-colors text-lg font-semibold"
+                  href="terms-and-conditions.html">Nutzungsbedingungen</a>
+              </li>
+              <li>
+                <a class="text-gray-300 hover:text-teal transition-colors text-lg font-semibold"
+                  href="advertising-disclosure.html">Risikohinweis</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex items-center space-x-8">
+            <div class="flex items-center text-gray-300">
+              <svg class="w-6 h-6 mr-3 text-teal" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+              <span class="font-semibold">Reguliert durch AMF</span>
+            </div>
+            <div class="flex items-center text-gray-300">
+              <svg class="w-6 h-6 mr-3 text-teal" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+              <span class="font-semibold">256-Bit-Verschlüsselung</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-400 max-w-4xl mx-auto mb-6 text-lg font-medium leading-relaxed"> Algorithmischer Handel
+          birgt erhebliche Risiken und kann zum Verlust von Kapital führen. <span class="teal-text"
+            id="dynamic-brand">Immediate Edge</span> ist eine Technologieplattform und bietet keine Finanzberatung. Die
+          vergangene
+          Leistung garantiert keine zukünftigen Ergebnisse. </p>
+        <p class="text-gray-500 text-lg font-semibold">© <span id="current-year"></span> Immediate Edge. Alle Rechte
+          vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Calculator functionality
+    const amountSlider = document.getElementById('amount');
+    const daysSlider = document.getElementById('days');
+    const amountValue = document.getElementById('amountValue');
+    const daysValue = document.getElementById('daysValue');
+    const profitOut = document.getElementById('profitOut');
+    const explainText = document.getElementById('explain');
+    // Tasa diaria del script original
+    const DAILY_RATE = 0.235; // 23.5% diario
+    function updateCalculator() {
+      const investment = parseInt(amountSlider.value);
+      const time = parseInt(daysSlider.value);
+      // Formatear valor de inversión para mostrar
+      let investmentDisplay;
+      if (investment >= 1000000) {
+        investmentDisplay = (investment / 1000000).toFixed(1) + ' Mio. €';
+      } else if (investment >= 1000) {
+        investmentDisplay = (investment / 1000).toFixed(0) + ' Tsd. €';
+      } else {
+        investmentDisplay = investment.toLocaleString() + ' €';
+      }
+      amountValue.textContent = investmentDisplay;
+      daysValue.textContent = time + ' Tage';
+      // CÁLCULO CORREGIDO - Igual al script original
+      // Fórmula de interés compuesto: A * ( (1 + r)^n - 1 )
+      const profit = investment * (Math.pow(1 + DAILY_RATE, time) - 1);
+      profitOut.textContent = Math.round(profit).toLocaleString() + ' €';
+      explainText.textContent = `Mit ${investment.toLocaleString()} € für ${time} Tage`;
+    }
+    amountSlider.addEventListener('input', updateCalculator);
+    daysSlider.addEventListener('input', updateCalculator);
+    // Initialize calculator
+    updateCalculator();
+  </script>
+  <script>
+    // Lógica para marcas
+    document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      // Manejar marca (kw) con seguridad (utm_campaign)
+      let requestedKW = urlParams.get('kw');
+      let securityParam = urlParams.get('utm_campaign');
+      const defaultBrand = 'Immediate Edge';
+
+      const hasBraces = (str) => str && (str.includes('{') || str.includes('}'));
+
+      // Logic: Only use dynamic kw if 'utm_campaign' is present, NOT EMPTY, AND kw is valid AND neither contain braces.
+      if (securityParam && securityParam.trim() !== '' && requestedKW && requestedKW.trim() !== '' && !hasBraces(requestedKW) && !hasBraces(securityParam)) {
+        requestedKW = requestedKW.replace(/-/g, ' ')
+          .replace(/\b\w/g, l => l.toUpperCase());
+      } else {
+        requestedKW = defaultBrand;
+      }
+
+      // Reemplazar TODOS los elementos con la marca dinámica
+      document.querySelectorAll('[id="dynamic-brand"], .dynamic-brand').forEach(el => {
+        el.textContent = requestedKW;
+      });
+
+      // Update Current Year
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      // Pass URL params to links
+      document.querySelectorAll('a[href*="go.smartfinanceplaan.com"], a[href*="index22.html"]').forEach(link => {
+        const currentHref = link.getAttribute('href');
+        const separator = currentHref.includes('?') ? '&' : '?';
+        const params = window.location.search.substring(1); // Get query string without initial ?
+        if (params) {
+          link.setAttribute('href', currentHref + separator + params);
+        }
+      });
+
+      // Email Pass-through Logic
+      const heroForm = document.getElementById('hero-email-form');
+      if (heroForm) {
+        heroForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const email = document.getElementById('hero-email').value;
+          const baseUrl = 'https://go.smartfinanceplaan.com/action/3Tqc5F5rwBm1/3Tqc5F7JOTzL/30'; // Updated Target URL
+
+          // Construct URL with params
+          const currentParams = new URLSearchParams(window.location.search);
+          currentParams.append('email', email);
+
+          window.location.href = baseUrl + '?' + currentParams.toString();
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de" translate="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plattform – Registrierung & Überblick</title>
+
+  <link rel="icon" type="image/png" href="images/favicon.png"/>
+  <link rel="stylesheet" href="css/fonts.css"/>
+  <link rel="stylesheet" href="css/tailwind.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body class="overflow-x-hidden">
+
+<!-- HERO / HEADER (MISMO DISEÑO) -->
+<header class="header-mobile flex flex-col">
+  <nav class="nav py-1 lg:py-5 border-b border-b-white/10">
+    <div class="relative max-w-8xl px-4 mx-auto pt-8 lg:pt-0 flex items-center justify-center lg:justify-between">
+      <a class="logo flex items-center gap-3">
+        <img alt="" src="images/logo.svg"/>
+        <div class="uppercase text-white">
+          <span id="dynamic-brand-2"></span>
+        </div>
+      </a>
+
+      <div class="absolute -top-1 left-0 w-full lg:w-auto lg:static px-5 py-1 lg:py-2 bg-primary-main lg:rounded-md text-white font-bold text-sm lg:text-base text-center">
+        Registrierung aktuell verfügbar
+      </div>
+    </div>
+  </nav>
+
+  <div class="relative w-full max-w-8xl px-4 mx-auto z-10 flex-grow flex flex-col">
+    <div class="header-lines flex flex-col flex-grow">
+      <div class="flex flex-col lg:flex-row flex-grow">
+
+        <!-- LEFT COPY -->
+        <div class="w-full lg:w-1/2 my-6 text-center lg:text-left lg:self-center">
+          <div class="text-3xl xl:text-5xl font-alt font-black text-white">
+            Registrierung für
+          </div>
+          <div class="text-4xl xl:text-6xl xl:leading-tight font-alt font-black text-primary-bright">
+            <span id="dynamic-brand-3"></span>
+          </div>
+
+          <div class="my-4 text-base xl:text-xl font-semibold text-white/85">
+            Sie haben gezielt nach dieser Plattform gesucht.
+            <br/>
+            Hier können Sie prüfen, ob aktuell eine Registrierung möglich ist.
+          </div>
+
+          <div class="my-6 text-base md:text-lg font-semibold text-white/75">
+            Die Anmeldung ist aktuell verfügbar für Nutzer in
+            <span id="dynamic-country" class="dynamic-country">Deutschland</span>.
+          </div>
+
+          <div class="flex items-center justify-center lg:justify-start gap-4">
+            <div class="flex">
+              <img class="w-10 h-10 rounded-full border border-primary-dark" src="images/header-avatar-1.webp"/>
+              <img class="w-10 h-10 -ml-3 rounded-full border border-primary-dark" src="images/header-avatar-2.webp"/>
+              <img class="w-10 h-10 -ml-3 rounded-full border border-primary-dark" src="images/header-avatar-3.webp"/>
+            </div>
+            <div class="text-left text-xs sm:text-sm text-white/80">
+              <div>Verifizierte Registrierungen</div>
+              <div class="font-bold">Begrenzte Kapazität</div>
+            </div>
+          </div>
+
+          <div class="mt-6 text-sm text-white/60 max-w-xl">
+            Hinweis: Die Registrierung stellt keine Finanzberatung dar.
+            Handel ist mit Risiken verbunden und Ergebnisse variieren.
+          </div>
+        </div>
+
+        <!-- FORM (MISMO DISEÑO) -->
+        <div class="header-form pt-12 mx-auto lg:ml-auto lg:mr-0 w-full max-w-[420px] lg:max-w-[490px] flex flex-col items-center">
+          <img class="w-12" src="images/logo.svg" alt=""/>
+          <div class="mt-1 text-2xl font-black text-white font-alt">
+            Jetzt registrieren
+          </div>
+
+          <form action="registration-form.php"
+                class="rf-form js-rf-form leadform"
+                id="form"
+                method="post">
+
+            <input type="hidden" name="intgrtn_custom2" id="intgrtn_custom2" value="manual"/>
+            <input type="hidden" name="gbraid" id="gbraid"/>
+            <input type="hidden" name="wbraid" id="wbraid"/>
+            <input type="hidden" name="gclid" id="gclid"/>
+            <input type="hidden" name="msclkid" id="msclkid"/>
+            <input type="hidden" name="kw" id="kw"/>
+            <input type="hidden" name="phone_country" id="phone_country" value="de"/>
+
+            <div class="rf-form__content">
+              <div class="rf-form-field">
+                <input class="rf-form-input" name="first_name" placeholder="Vorname" required/>
+              </div>
+              <div class="rf-form-field">
+                <input class="rf-form-input" name="last_name" placeholder="Nachname" required/>
+              </div>
+              <div class="rf-form-field">
+                <input class="rf-form-input" name="email" type="email" placeholder="E-Mail-Adresse" required/>
+              </div>
+              <div class="rf-form-field">
+                <input class="rf-form-input phone-input" name="phone1" id="phone" placeholder="Telefonnummer" required/>
+              </div>
+
+              <div class="my-5">
+                <button class="w-full h-12 border-0 rounded-md text-white font-black font-alt cursor-pointer bg-primary-bright hover:brightness-105">
+                  Registrierung prüfen
+                </button>
+              </div>
+
+              <div class="text-xs text-white/70 text-center">
+                Durch das Absenden stimmen Sie zu, kontaktiert zu werden.
+                Keine Gewinnzusagen. Abmeldung jederzeit möglich.
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- CONTENIDO INFERIOR (MISMO DISEÑO – COPY LIMPIADO) -->
+<main class="main">
+
+<section class="my-12 w-full max-w-8xl px-4 mx-auto">
+  <div class="mb-6 text-sm uppercase font-black text-primary-medium">
+    Überblick
+  </div>
+  <div class="text-primary-darker text-xl lg:text-2xl font-black font-alt">
+    Wie der Registrierungsprozess funktioniert
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+    <div class="p-6 rounded-lg bg-primary-light">
+      <div class="font-black">1. Daten eintragen</div>
+      <div class="text-primary-medium mt-1">
+        Tragen Sie Ihre Kontaktdaten ein, um die Registrierung zu starten.
+      </div>
+    </div>
+    <div class="p-6 rounded-lg bg-primary-light">
+      <div class="font-black">2. Verfügbarkeit prüfen</div>
+      <div class="text-primary-medium mt-1">
+        Wir prüfen, ob aktuell Kapazitäten für neue Nutzer bestehen.
+      </div>
+    </div>
+    <div class="p-6 rounded-lg bg-primary-light">
+      <div class="font-black">3. Rückmeldung erhalten</div>
+      <div class="text-primary-medium mt-1">
+        Sie erhalten Informationen zu den nächsten Schritten.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-primary-dark py-10">
+  <div class="max-w-8xl px-4 mx-auto text-sm text-white/70 leading-relaxed">
+    <strong class="text-white">Risikohinweis:</strong>
+    Der Handel mit Kryptowährungen und automatisierten Systemen ist mit Risiken verbunden
+    und kann zum Verlust des eingesetzten Kapitals führen.
+    Diese Seite dient ausschließlich zur Registrierung und stellt keine Anlageberatung dar.
+  </div>
+</section>
+
+</main>
+
+<script>
+  const p = new URLSearchParams(window.location.search);
+  ['gclid','wbraid','gbraid','msclkid','kw'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.value=p.get(id)||'';
+  });
+</script>
+
+<script src="geos.js"></script>
+<script src="brands.js"></script>
+
+<script>
+  document.querySelectorAll('[id^="dynamic-brand"]').forEach(el=>{
+    el.textContent=(new URLSearchParams(location.search).get('kw')||'Plattform').replace(/-/g,' ');
+  });
+</script>
+
+</body>
+</html>

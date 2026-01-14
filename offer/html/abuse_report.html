@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Missbrauch melden</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="Missbrauch oder Spam melden" name="description" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			line-height: 1.6;
+		}
+
+		.content-container {
+			max-width: 800px;
+		}
+	</style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+	<div class="container mx-auto px-4 py-12">
+		<div class="content-container mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+			<!-- Header -->
+			<div class="bg-red-600 text-white px-6 py-8">
+				<h1 class="text-3xl font-bold">Missbrauch melden</h1>
+			</div>
+			<!-- Content -->
+			<div class="p-6 md:p-8">
+				<h2 class="text-xl font-semibold mt-6 mb-4">Melden Sie Spam oder Missbrauch</h2>
+				<p class="mb-4">Wir nehmen Missbrauch und Spam sehr ernst. Wenn Sie glauben, dass Sie eine unerwünschte
+					Nachricht erhalten haben oder auf unangemessene Inhalte gestoßen sind, lassen Sie es uns bitte
+					wissen.</p>
+
+				<h2 class="text-xl font-semibold mt-6 mb-4">Wie Sie uns kontaktieren können</h2>
+				<p class="mb-4">Bitte senden Sie Details zum Vorfall, einschließlich relevanter Kopfzeilen oder
+					Screenshots, an:</p>
+				<p class="mb-2"><strong>E-Mail:</strong> <span id="domainEmail">abuse@beispiel.de</span></p>
+
+				<p class="mt-8 text-sm text-gray-600">Wir werden Ihre Meldung untersuchen und gegebenenfalls geeignete
+					Maßnahmen ergreifen.</p>
+			</div>
+			<!-- Footer -->
+			<div class="bg-gray-100 px-6 py-4 text-center text-sm text-gray-600">
+				<p>© <span id="currentYear"></span> <span id="domainName">beispiel.de</span>. Alle Rechte vorbehalten.
+				</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		const now = new Date();
+		document.getElementById('currentYear').textContent = now.getFullYear();
+
+		const domain = window.location.hostname.replace('www.', '');
+		document.getElementById('domainName').textContent = domain;
+		document.getElementById('domainEmail').textContent = 'abuse@' + domain;
+	</script>
+</body>
+
+</html>

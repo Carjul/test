@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<title>Information importante</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Divulgations importantes concernant les produits d'investissement" name="description"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        .content-container {
+            max-width: 800px;
+        }
+        h2 {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        .disclosure-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #ef4444;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-icon {
+            color: #ef4444;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<div class="container mx-auto px-4 py-12">
+<div class="content-container mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+<!-- Header -->
+<div class="bg-blue-600 text-white px-6 py-8">
+<h1 class="text-3xl font-bold">Information importante</h1>
+<p class="mt-2 opacity-90">Dernière mise à jour :<span id="currentDate"></span></p>
+</div>
+<!-- Content -->
+<div class="p-6 md:p-8">
+<!-- Warning Box -->
+<div class="disclosure-box">
+<div class="flex items-start">
+<i class="fas fa-exclamation-triangle warning-icon text-xl"></i>
+<div>
+<h3 class="font-bold text-lg mb-2">Avertissement sur les risques d'investissement</h3>
+<p>Les investissements comportent des risques, y compris la perte éventuelle du capital. Les performances passées ne sont pas un indicateur des résultats futurs.</p>
+</div>
+</div>
+</div>
+<h2 class="text-xl font-semibold mt-6 mb-4">1. Type de contenu</h2>
+<p class="mb-4">Les contenus disponibles sur notre site web (<span class="font-medium" id="domainName1"></span>), y compris des articles d'actualité, des documents d'information, des listes et des évaluations de fournisseurs de services financiers et de produits d'investissement (collectivement désignés comme "Matériels"), sont fournis uniquement à des fins informatives.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">2. Manque de recommandation</h2>
+<p class="mb-4">Nous ne proposons pas de services financiers, d'intermédiation, de conseil ou de planification de retraite, et nous n'approuvons ni ne recommandons d'actions, de valeurs, de métaux précieux ou d'autres produits d'investissement spécifiques, ni les stratégies qui y sont associées.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">3. Limitation de responsabilité</h2>
+<p class="mb-4">Bien que nous nous efforcions de garantir la précision et la fiabilité des documents et autres contenus de notre site web, nous ne pouvons pas assurer leur intégralité ou exactitude. Nous déclinons toute responsabilité pour les dommages directs ou indirects résultant de l'utilisation de nos documents ou contenus.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">4. Recherche indépendante</h2>
+<p class="mb-4">Les investisseurs sont vivement encouragés à effectuer leurs propres recherches indépendantes sur les produits, services et stratégies d'investissement avant de prendre des décisions. Les performances passées des produits d'investissement ne sont pas garantes des résultats futurs.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">5. Risques d'investissement</h2>
+<p class="mb-4">Tous les investissements comportent un certain degré de risque, y compris la perte potentielle du capital investi. Nous n'agissons pas en tant qu'intermédiaires et ne fournissons pas de conseils personnalisés ni de recommandations spécifiques.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">6. Prise de décisions éclairées</h2>
+<p class="mb-4">Les décisions d'investissement doivent toujours être fondées sur une évaluation minutieuse de votre situation financière, de vos objectifs, de votre tolérance au risque et de vos intentions. Il est recommandé de consulter des professionnels qualifiés en matière juridique, financière ou fiscale pour votre situation spécifique.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">7. Conflits potentiels</h2>
+<p class="mb-4">Notre organisation, ses entreprises affiliées et leurs employés peuvent entretenir des relations commerciales avec, fournir des services à ou détenir des positions (haussières ou baissières) sur des actifs ou des émetteurs mentionnés dans les contenus de recherche de ce site web.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">8. Exactitude des informations</h2>
+<p class="mb-4">LES NOTES, LISTES ET AUTRES MATÉRIELS SONT BASÉS SUR DES INFORMATIONS QUE NOUS CONSIDÉRONS FIABLES ; CEPENDANT, NOUS N'AVONS PAS VÉRIFIÉ CES INFORMATIONS DE MANIÈRE INDÉPENDANTE. TOUTES LES OPINIONS, ESTIMATIONS OU PRÉVISIONS CORRESPONDENT À LA DATE DE PUBLICATION ET PEUVENT ÊTRE MODIFIÉES SANS PRÉAVIS.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">9. Clause de non-responsabilité</h2>
+<p class="mb-4">Nous ne faisons aucune déclaration ou garantie, expresse ou implicite, quant à l'exactitude, la véracité, l'exhaustivité ou l'adéquation des informations, opinions ou projections contenues dans les documents. L'utilisation de ce contenu se fait à vos propres risques.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">10. État de régulation</h2>
+<p class="mb-4">Nous ne sommes pas des conseillers financiers ni des courtiers. Vous pouvez vérifier les antécédents et les qualifications de nos partenaires d'investissement auprès des organismes de réglementation compétents dans votre juridiction.</p>
+<div class="bg-blue-50 p-4 rounded-lg mt-8">
+<h3 class="font-bold text-blue-800 mb-2">Pour toute demande de renseignements :</h3>
+<p class="mb-2"><strong>Adresse e-mail :</strong> <span id="domainEmail">conformite@exemple.com</span></p>
+</div>
+</div>
+<!-- Footer -->
+<div class="bg-gray-100 px-6 py-4 text-center text-sm text-gray-600">
+<p>© <span id="currentYear"></span> <span id="domainName2">exemple.es</span>. Tous droits réservés.</p>
+</div>
+</div>
+</div>
+<script>
+        // Set current date and year
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        
+        // Current date (last updated)
+        document.getElementById('currentDate').textContent = now.toLocaleDateString('fr-FR', options);
+        
+        // Current year
+        document.getElementById('currentYear').textContent = now.getFullYear();
+        
+        // Dynamic domain name and email
+        const domain = window.location.hostname.replace('www.', '');
+        document.querySelectorAll('[id^="domainName"]').forEach(el => {
+            el.textContent = domain;
+        });
+        document.getElementById('domainEmail').textContent = 'compliance@' + domain;
+    </script>
+</body>
+</html>

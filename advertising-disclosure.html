@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Werbehinweis & Risikooffenlegung</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Werbehinweis und Risikooffenlegung" name="description" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        .content-container {
+            max-width: 800px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto px-4 py-12">
+        <div class="content-container mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Header -->
+            <div class="bg-blue-600 text-white px-6 py-8">
+                <h1 class="text-3xl font-bold">Werbehinweis & Risikooffenlegung</h1>
+            </div>
+            <!-- Content -->
+            <div class="p-6 md:p-8">
+                <h2 class="text-xl font-semibold mt-6 mb-4">Wichtiger Risikohinweis</h2>
+                <p class="mb-4">Der Handel mit Forex, CFDs und Kryptowährungen ist hochspekulativ, birgt ein hohes
+                    Risiko und ist möglicherweise nicht für alle Anleger geeignet. Sie können einen Teil oder das
+                    gesamte investierte Kapital verlieren; daher sollten Sie nicht mit Kapital spekulieren, dessen
+                    Verlust Sie sich nicht leisten können.</p>
+
+                <h2 class="text-xl font-semibold mt-6 mb-4">Werbehinweis</h2>
+                <p class="mb-4">Diese Website ist ein Marktplatz. Daher sollten Sie wissen, dass der Eigentümer
+                    Verbindungen zu den auf dieser Seite beworbenen Produkten und Dienstleistungen hat. Der Eigentümer
+                    erhält Zahlungen für qualifizierte Leads, die an Partner weitergeleitet werden.</p>
+                <p class="mb-4">Die auf dieser Website dargestellten Videos oder Bilder dienen nur zu
+                    Illustrationszwecken und stellen keine tatsächlichen Ergebnisse dar. Alle Charaktere können fiktiv
+                    sein.</p>
+
+                <h2 class="text-xl font-semibold mt-6 mb-4">Haftungsausschluss</h2>
+                <p class="mb-4">Wir übernehmen keine Haftung für Verluste oder Schäden, die durch das Vertrauen auf die
+                    auf dieser Website enthaltenen Informationen entstehen. Dies gilt auch für Daten, Zitate, Grafiken
+                    sowie Kauf- oder Verkaufssignale.</p>
+
+                <h2 class="text-xl font-semibold mt-6 mb-4">Kontakt</h2>
+                <p class="mb-4">Bei Fragen wenden Sie sich bitte an unseren Support.</p>
+            </div>
+            <!-- Footer -->
+            <div class="bg-gray-100 px-6 py-4 text-center text-sm text-gray-600">
+                <p>© <span id="currentYear"></span> <span id="domainName">beispiel.de</span>. Alle Rechte vorbehalten.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const now = new Date();
+        document.getElementById('currentYear').textContent = now.getFullYear();
+
+        const domain = window.location.hostname.replace('www.', '');
+        document.getElementById('domainName').textContent = domain;
+    </script>
+</body>
+
+</html>

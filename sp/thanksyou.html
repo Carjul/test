@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci pour votre inscription</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .hero-gradient-bg {
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 50%, #2c5282 100%);
+        }
+        
+        .success-animation {
+            animation: success-pulse 2s ease-in-out;
+        }
+        
+        @keyframes success-pulse {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header Banner -->
+    <div class="gradient-bg text-white py-2 px-4 text-center text-sm">
+        <p><i>Mis à jour : <span id="fechaCompleta"></span></i></p>
+    </div>
+    
+    <!-- Thank You Section -->
+    <section class="hero-gradient-bg text-white min-h-screen flex items-center justify-center py-16 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
+                <!-- Success Icon -->
+                <div class="success-animation mb-8">
+                    <div class="w-24 h-24 bg-green-500 rounded-full flex items-center justify-center mx-auto">
+                        <i class="fas fa-check text-white text-4xl"></i>
+                    </div>
+                </div>
+                
+                <!-- Thank You Message -->
+                <h1 class="text-3xl md:text-4xl font-bold mb-6">Merci pour votre inscription !</h1>
+                <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+                    Votre demande a été reçue avec succès. Un conseiller vous contactera dans les plus brefs délais pour vous accompagner dans votre démarche.
+                </p>
+                
+                <!-- Next Steps -->
+                <div class="bg-blue-900 bg-opacity-30 rounded-xl p-6 mb-8 text-left">
+                    <h2 class="text-xl font-semibold mb-4 text-green-300">Prochaines étapes :</h2>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-green-400 mt-1 mr-3"></i>
+                            <span>Un conseiller vous appellera sous 24 heures</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-green-400 mt-1 mr-3"></i>
+                            <span>Vous recevrez un email de confirmation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-user-check text-green-400 mt-1 mr-3"></i>
+                            <span>Vérification de votre compte</span>
+                        </li>
+                    </ul>
+                </div>
+</div>
+            
+            <!-- Legal Notice -->
+            <div class="mt-8 text-center text-blue-200 text-sm max-w-3xl mx-auto">
+                <p>Votre capital est exposé à des risques. Les performances passées ne préjugent pas des résultats futurs.</p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Configuración de fecha
+        const now = new Date();
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        document.getElementById('fechaCompleta').textContent = now.toLocaleDateString('fr-FR', options);
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Allgemeine Geschäftsbedingungen</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Allgemeine Geschäftsbedingungen" name="description" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        .content-container {
+            max-width: 800px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .update-date {
+            background-color: #f8fafc;
+            border-left: 4px solid #3b82f6;
+        }
+
+        ol {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto px-4 py-12">
+        <div class="content-container mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Header -->
+            <div class="bg-blue-600 text-white px-6 py-8">
+                <h1 class="text-3xl font-bold">Allgemeine Geschäftsbedingungen</h1>
+                <p class="mt-2 opacity-90">Zuletzt aktualisiert: <span id="currentDate"></span></p>
+            </div>
+            <!-- Content -->
+            <div class="p-6 md:p-8">
+                <!-- Effective Date -->
+                <div class="update-date px-4 py-3 mb-6 rounded">
+                    <p><strong>Datum des Inkrafttretens:</strong> <span id="effectiveDate"></span></p>
+                </div>
+                <h2 class="text-xl font-semibold mt-6 mb-4">1. Akzeptanz der Bedingungen</h2>
+                <p class="mb-4">Durch den Zugriff auf und die Nutzung dieser Website (<span id="domainName1"></span>)
+                    erklären Sie sich mit diesen Allgemeinen Geschäftsbedingungen einverstanden. Wenn Sie diesen
+                    Bedingungen nicht zustimmen, nutzen Sie unsere Website bitte nicht.</p>
+                <h2 class="text-xl font-semibold mt-6 mb-4">2. Änderungen der Bedingungen</h2>
+                <p class="mb-4">Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Änderungen treten
+                    sofort nach Veröffentlichung auf der Website in Kraft. Es liegt in Ihrer Verantwortung, diese
+                    Bedingungen regelmäßig zu überprüfen.</p>
+                <h2 class="text-xl font-semibold mt-6 mb-4">3. Nutzung der Website</h2>
+                <p class="mb-4">Sie stimmen zu, Folgendes zu unterlassen:</p>
+                <ol class="mb-4 space-y-2">
+                    <li>Die Website für illegale oder betrügerische Zwecke zu nutzen</li>
+                    <li>Inhalte ohne Erlaubnis zu kopieren, zu reproduzieren oder weiterzuverbreiten</li>
+                    <li>Zu versuchen, unbefugt auf geschützte Bereiche der Website zuzugreifen</li>
+                    <li>Viren oder anderen schädlichen Code einzuführen</li>
+                </ol>
+                <h2 class="text-xl font-semibold mt-6 mb-4">4. Geistiges Eigentum</h2>
+                <p class="mb-4">Alle Inhalte auf dieser Website (Texte, Grafiken, Logos, Bilder) sind unser Eigentum
+                    oder das unserer Lizenzgeber und sind durch Urheberrechte geschützt.</p>
+                <h2 class="text-xl font-semibold mt-6 mb-4">5. Links zu Dritten</h2>
+                <p class="mb-4">Unsere Website kann Links zu Websites Dritter enthalten. Wir haben keine Kontrolle über
+                    diese Websites und übernehmen keine Verantwortung für deren Inhalte oder Datenschutzpraktiken.</p>
+                <h2 class="text-xl font-semibold mt-6 mb-4">6. Haftungsbeschränkung</h2>
+                <p class="mb-4">Soweit gesetzlich zulässig, lehnen wir jede Haftung ab für:</p>
+                <ol class="mb-4 space-y-2">
+                    <li>Indirekte Schäden oder Folgeschäden</li>
+                    <li>Ungenauigkeiten oder Auslassungen im Inhalt der Website</li>
+                    <li>Unterbrechungen oder Nichtverfügbarkeit der Website</li>
+                </ol>
+                <h2 class="text-xl font-semibold mt-6 mb-4">7. Kontaktieren Sie uns</h2>
+                <p class="mb-4">Wenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns bitte unter:</p>
+                <p class="mb-2"><strong>E-Mail:</strong> <span id="domainEmail">rechtliches@beispiel.de</span></p>
+            </div>
+            <!-- Footer -->
+            <div class="bg-gray-100 px-6 py-4 text-center text-sm text-gray-600">
+                <p>© <span id="currentYear"></span> <span id="domainName2">beispiel.de</span>. Alle Rechte vorbehalten.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Set current date and year
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+        // Current date (last updated)
+        document.getElementById('currentDate').textContent = now.toLocaleDateString('de-DE', options);
+
+        // Effective date (could be different from current date)
+        const effectiveDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 7);
+        document.getElementById('effectiveDate').textContent = effectiveDate.toLocaleDateString('de-DE', options);
+
+        // Current year
+        document.getElementById('currentYear').textContent = now.getFullYear();
+
+        // Dynamic domain name and email
+        const domain = window.location.hostname.replace('www.', '');
+        document.querySelectorAll('[id^="domainName"]').forEach(el => {
+            el.textContent = domain;
+        });
+        document.getElementById('domainEmail').textContent = 'rechtliches@' + domain;
+    </script>
+</body>
+
+</html>

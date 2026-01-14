@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<title>Conditions Générales</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Conditions générales d'utilisation" name="description"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        .content-container {
+            max-width: 800px;
+        }
+        h2 {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        .update-date {
+            background-color: #f8fafc;
+            border-left: 4px solid #3b82f6;
+        }
+        ol {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+        }
+        ol ol {
+            list-style-type: lower-alpha;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<div class="container mx-auto px-4 py-12">
+<div class="content-container mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+<!-- Header -->
+<div class="bg-blue-600 text-white px-6 py-8">
+<h1 class="text-3xl font-bold">Conditions Générales d'Utilisation</h1>
+<p class="mt-2 opacity-90">Dernière mise à jour :<span id="currentDate"></span></p>
+</div>
+<!-- Content -->
+<div class="p-6 md:p-8">
+<!-- Effective Date -->
+<div class="update-date px-4 py-3 mb-6 rounded">
+<p><strong>Date d'effet :</strong> <span id="effectiveDate"></span></p>
+</div>
+<h2 class="text-xl font-semibold mt-6 mb-4">1. Acceptation des conditions</h2>
+<p class="mb-4">En accédant et en utilisant ce site web,<span id="domainName1"></span>), vous acceptez d'être lié par ces conditions générales d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre site.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">2. Modifications des conditions</h2>
+<p class="mb-4">Nous nous réservons le droit de modifier ces conditions à tout moment. Les modifications prendront effet immédiatement après leur publication sur le site. Il est de votre responsabilité de consulter régulièrement ces conditions.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">3. Utilisation du site</h2>
+<p class="mb-4">Vous acceptez de ne pas :</p>
+<ol class="list-decimal pl-6 mb-4 space-y-2">
+<li>Utiliser le site de manière illégale ou frauduleuse</li>
+<li>Copier, reproduire ou redistribuer du contenu sans autorisation</li>
+<li>Tenter d'accéder à des zones sécurisées du site sans autorisation</li>
+<li>Introduire des virus ou tout autre code malveillant</li>
+</ol>
+<h2 class="text-xl font-semibold mt-6 mb-4">4. Propriété intellectuelle</h2>
+<p class="mb-4">Tout le contenu présent sur ce site (textes, graphiques, logos, images) est notre propriété ou celle de nos concédants de licence et est protégé par les lois sur la propriété intellectuelle.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">5. Liens vers des sites tiers</h2>
+<p class="mb-4">Notre site peut contenir des liens vers des sites web tiers. Nous n'avons aucun contrôle sur ces sites et déclinons toute responsabilité quant à leur contenu ou pratiques de confidentialité.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">6. Limitation de responsabilité</h2>
+<p class="mb-4">Dans toute la mesure permise par la loi, nous déclinons toute responsabilité pour :</p>
+<ol class="list-decimal pl-6 mb-4 space-y-2">
+<li>Toute perte ou dommage indirect ou consécutif</li>
+<li>Toute inexactitude ou omission dans le contenu du site</li>
+<li>Toute interruption ou indisponibilité du site</li>
+</ol>
+<h2 class="text-xl font-semibold mt-6 mb-4">7. Indemnisation</h2>
+<p class="mb-4">Vous acceptez de nous indemniser et de nous tenir harmless contre toute réclamation ou demande résultant de votre violation de ces conditions ou de vos activités sur le site.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">8. Résiliation</h2>
+<p class="mb-4">Nous pouvons suspendre ou résilier votre accès au site sans préavis si nous estimons que vous avez enfreint ces conditions.</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">9. Loi applicable</h2>
+<p class="mb-4">Ces conditions sont régies par et interprétées conformément aux lois de [pays/juridiction]. Tout litige sera soumis à la juridiction exclusive des tribunaux de [ville, pays].</p>
+<h2 class="text-xl font-semibold mt-6 mb-4">10. Nous contacter</h2>
+<p class="mb-4">Pour toute question concernant ces conditions générales, veuillez nous contacter à :</p>
+<p class="mb-2"><strong>Email :</strong> <span id="domainEmail">juridique@exemple.com</span></p>
+<p><strong>Adresse postale :</strong>[Adresse complète]</p>
+</div>
+<!-- Footer -->
+<div class="bg-gray-100 px-6 py-4 text-center text-sm text-gray-600">
+<p>© <span id="currentYear"></span> <span id="domainName2">exemple.com</span>. Tous droits réservés.</p>
+</div>
+</div>
+</div>
+<script>
+        // Set current date and year
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        
+        // Current date (last updated)
+        document.getElementById('currentDate').textContent = now.toLocaleDateString('fr-FR', options);
+        
+        // Effective date (could be different from current date)
+        const effectiveDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 7);
+        document.getElementById('effectiveDate').textContent = effectiveDate.toLocaleDateString('fr-FR', options);
+        
+        // Current year
+        document.getElementById('currentYear').textContent = now.getFullYear();
+        
+        // Dynamic domain name and email
+        const domain = window.location.hostname.replace('www.', '');
+        document.querySelectorAll('[id^="domainName"]').forEach(el => {
+            el.textContent = domain;
+        });
+        document.getElementById('domainEmail').textContent = 'legal@' + domain;
+    </script>
+</body>
+</html>
