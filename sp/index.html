@@ -1,477 +1,545 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-  <head>
-    <!-- FF Pro Page Defaults -->
-<script>
-var fluxDefaults = {
-  p: "3bEY9uxrKGgQ",
-  f: "3bETCMZFk6ST"
-}
-</script>
-<!-- FF Pro Universal Tag -->
-<script>!function(f,l,u,x,j,s,a,b){window.flux||(j="undefined"!=typeof fluxOptions?fluxOptions:{},s="undefined"!=typeof fluxDefaults?fluxDefaults:{},(a=l.createElement("script")).src="https://"+u+"/integration/lumetricv2.min.js?v="+x,a.type="text/javascript",a.async="true",queue=[],window.flux={track:function(){queue.push(arguments)}},a.onload=a.onreadystatechange=function(){var rs=this.readyState;if(!rs||"complete"==rs||"loaded"==rs)try{for(window.flux=new Lumetric(u,x,j,s);0!=queue.length;){var args=queue.pop();window.flux.track.apply(null,args)}}catch(e){}},(b=document.getElementsByTagName("script")[0]).parentNode.insertBefore(a,b))}(window,document,"go.worldwidetopbrokers.com","3.3.0");</script>
-
-<!-- FF Pro View Event -->
-<script>
- flux.track("view")
-</script>
-    <meta charset="utf-8" />
-    <title>Trading-Plattform</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="description" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-    <link href="" rel="icon" sizes="32x32" />
-    <style>
-      /* Mobile sticky button animation */
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-
-        50% {
-          transform: scale(1.05);
-        }
-
-        100% {
-          transform: scale(1);
-        }
+<head>
+  <meta charset="utf-8" />
+  <title>Trading-Plattform</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="description" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="" rel="icon" sizes="32x32" />
+  <style>
+    /* Mobile sticky button animation */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
       }
 
-      .md\:hidden a {
-        animation: pulse 2s infinite;
-      }
-
-      .gradient-bg {
-        background: linear-gradient(135deg, #1e3a8a 0%, #1e3983 50%, #1e3983 100%);
-      }
-
-      .feature-card {
-        transition: all 0.3s ease;
-        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-      }
-
-      .feature-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
-      }
-
-      .security-badge {
-        filter: grayscale(30%);
-        transition: all 0.3s ease;
-      }
-
-      .security-badge:hover {
-        filter: grayscale(0%);
+      50% {
         transform: scale(1.05);
       }
 
-      .btn-primary {
-        background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
-        transition: all 0.3s ease;
+      100% {
+        transform: scale(1);
       }
+    }
 
-      .btn-primary:hover {
-        background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-      }
+    .md\:hidden a {
+      animation: pulse 2s infinite;
+    }
 
-      .btn-secondary {
-        background: linear-gradient(90deg, #10b981 0%, #059669 100%);
-        transition: all 0.3s ease;
-      }
+    .gradient-bg {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e3983 50%, #1e3983 100%);
+    }
 
-      .btn-secondary:hover {
-        background: linear-gradient(90deg, #059669 0%, #047857 100%);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
-      }
+    .feature-card {
+      transition: all 0.3s ease;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    }
 
-      .ticker-tape {
-        background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
-      }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    }
 
-      .check-icon {
-        color: #10b981;
-      }
+    .security-badge {
+      filter: grayscale(30%);
+      transition: all 0.3s ease;
+    }
 
-      .risk-warning {
-        border-left: 4px solid #ef4444;
-      }
-    </style>
-  </head>
-  <body class="font-sans bg-gray-50 text-gray-800">
-    <!-- Header Banner -->
-    <div class="gradient-bg text-white py-2 px-4 text-center text-sm">
-      <p>
-        <i>Mis à jour : <span id="fechaCompleta"></span>– Données vérifiées quotidiennement </i>
-      </p>
-    </div>
-    <!-- Hero Section Rediseñada -->
-    <section class="hero-gradient-bg text-white py-10 md:py-16 px-4">
-      <div class="container mx-auto max-w-4xl text-center">
-        <!-- Badge destacado -->
-        <div class="inline-block bg-white bg-opacity-15 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+    .security-badge:hover {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: linear-gradient(90deg, #059669 0%, #047857 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    }
+
+    .ticker-tape {
+      background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
+    }
+
+    .check-icon {
+      color: #10b981;
+    }
+
+    .risk-warning {
+      border-left: 4px solid #ef4444;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+  <!-- Header Banner -->
+  <div class="gradient-bg text-white py-2 px-4 text-center text-sm">
+    <p>
+      <i>Mis à jour : <span id="fechaCompleta"></span>– Données vérifiées quotidiennement </i>
+    </p>
+  </div>
+  <!-- Hero Section Rediseñada -->
+  <section class="hero-gradient-bg text-white py-10 md:py-16 px-4">
+    <div class="container mx-auto max-w-4xl text-center">
+      <!-- Badge destacado -->
+      <div class="inline-block bg-white bg-opacity-15 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
         <span class="text-green-300 font-semibold text-sm">TRADING-PLATTFORM <span class="current-year"></span>
-</span>
+        </span>
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        <span class="text-green-400 hero-highlight" id="dynamic-brand-1"></span> Eine Trading-Plattform
+      </h1>
+      <h2 class="text-xl md:text-2xl mb-10 font-light max-w-3xl mx-auto leading-relaxed"> Entdecken Sie eine
+        Trading-Plattform: Starten Sie mit nur <span class="text-green-400 font-semibold">250 €</span>. </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-6xl mx-auto">
+        <!-- Benefits Column -->
+        <div class="glass-card p-6 rounded-2xl">
+          <ul class="space-y-4 mb-2">
+            <li class="flex items-center justify-start">
+              <div class="icon-container bg-green-900 bg-opacity-30 p-3 rounded-full mr-4">
+                <i class="fas fa-robot text-green-400 text-xl"></i>
+              </div>
+              <span class="text-left">Outils d'aide à la décision</span>
+            </li>
+            <li class="flex items-center justify-start">
+              <div class="icon-container bg-green-900 bg-opacity-30 p-3 rounded-full mr-4">
+                <i class="fas fa-mouse-pointer text-green-400 text-xl"></i>
+              </div>
+              <span class="text-left">Interface conviviale et support multi-actifs</span>
+            </li>
+            <li class="flex items-center justify-start">
+              <div class="icon-container bg-green-900 bg-opacity-30 p-3 rounded-full mr-4">
+                <i class="fas fa-headset text-green-400 text-xl"></i>
+              </div>
+              <span class="text-left">Support Personnalisé 24/7</span>
+            </li>
+          </ul>
         </div>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-          <span class="text-green-400 hero-highlight" id="dynamic-brand-1"></span> Eine Trading-Plattform
-</h1>
-        <h2 class="text-xl md:text-2xl mb-10 font-light max-w-3xl mx-auto leading-relaxed"> Entdecken Sie eine Trading-Plattform: Starten Sie mit nur <span class="text-green-400 font-semibold">250 €</span>. </h2>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-6xl mx-auto">
-          <!-- Benefits Column -->
-          <div class="glass-card p-6 rounded-2xl">
-            <ul class="space-y-4 mb-2">
-              <li class="flex items-center justify-start">
-                <div class="icon-container bg-green-900 bg-opacity-30 p-3 rounded-full mr-4">
-                  <i class="fas fa-robot text-green-400 text-xl"></i>
-                </div>
-                <span class="text-left">Outils d'aide à la décision</span>
-              </li>
-              <li class="flex items-center justify-start">
-                <div class="icon-container bg-green-900 bg-opacity-30 p-3 rounded-full mr-4">
-                  <i class="fas fa-mouse-pointer text-green-400 text-xl"></i>
-                </div>
-                <span class="text-left">Interface conviviale et support multi-actifs</span>
-              </li>
-              <li class="flex items-center justify-start">
-                <div class="icon-container bg-green-900 bg-opacity-30 p-3 rounded-full mr-4">
-                  <i class="fas fa-headset text-green-400 text-xl"></i>
-                </div>
-                <span class="text-left">Support Personnalisé 24/7</span>
-              </li>
-            </ul>
-          </div>
-          <!-- Form Section -->
-          <div class="glass-card p-6 rounded-2xl">
-            <h3 class="text-xl font-bold text-white mb-4 text-center">Starten Sie mit dem Trading</h3>
-<form class="space-y-4" id="main-form" action="thanksyou.html" method="GET">
-              <div>
-                <label class="block text-blue-100 text-sm mb-2" for="name">Vollständiger Name</label>
-                <input class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-blue-300 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" id="name" name="name" placeholder="Ihr Name" required="" type="text" />
-</div>
-              <div>
-                <label class="block text-blue-100 text-sm mb-2" for="email">E-Mail</label>
-                <input class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-blue-300 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" id="email" name="email" placeholder="Ihre@E-Mail.de" required="" type="email" />
-</div>
-              <div>
-                <label class="block text-blue-100 text-sm mb-2" for="phone">Telefon</label>
-                <input class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-blue-300 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent" id="phone" name="phone" placeholder="+49 123 456789" required="" type="tel" />
-</div>
-              <div class="flex items-start">
-                <input class="mt-1 mr-3" id="consent" name="consent" required="" type="checkbox" />
-                <label class="text-blue-100 text-sm" for="consent"> Ich akzeptiere den Erhalt von Marketing-Kommunikation </label>
-</div>
-              <button class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300" type="submit"> Konto eröffnen </button>
-</div>
-          </form>
+        <!-- Form Section -->
+        <div class="glass-card p-6 rounded-2xl">
+          <h3 class="text-xl font-bold text-white mb-4 text-center">Starten Sie mit dem Trading</h3>
+          <form class="space-y-4" id="main-form" action="thanksyou.html" method="GET">
+            <div>
+              <label class="block text-blue-100 text-sm mb-2" for="name">Vollständiger Name</label>
+              <input
+                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-blue-300 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                id="name" name="name" placeholder="Ihr Name" required="" type="text" />
+            </div>
+            <div>
+              <label class="block text-blue-100 text-sm mb-2" for="email">E-Mail</label>
+              <input
+                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-blue-300 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                id="email" name="email" placeholder="Ihre@E-Mail.de" required="" type="email" />
+            </div>
+            <div>
+              <label class="block text-blue-100 text-sm mb-2" for="phone">Telefon</label>
+              <input
+                class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-blue-300 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                id="phone" name="phone" placeholder="+49 123 456789" required="" type="tel" />
+            </div>
+            <div class="flex items-start">
+              <input class="mt-1 mr-3" id="consent" name="consent" required="" type="checkbox" />
+              <label class="text-blue-100 text-sm" for="consent"> Ich akzeptiere den Erhalt von Marketing-Kommunikation
+              </label>
+            </div>
+            <button
+              class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300"
+              type="submit"> Konto eröffnen </button>
         </div>
+        </form>
       </div>
-      <div class="flex flex-col items-center space-y-6 mb-8">
-        <div class="flex items-center bg-blue-900 bg-opacity-40 py-2 px-4 rounded-full">
-          <div class="w-3 h-3 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-          <p class="text-blue-100 text-sm">
-            <i>Plattform für Trader zugänglich</i>
-</p>
-        </div>
+    </div>
+    <div class="flex flex-col items-center space-y-6 mb-8">
+      <div class="flex items-center bg-blue-900 bg-opacity-40 py-2 px-4 rounded-full">
+        <div class="w-3 h-3 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+        <p class="text-blue-100 text-sm">
+          <i>Plattform für Trader zugänglich</i>
+        </p>
       </div>
-      <div class="bg-blue-950 bg-opacity-40 p-5 rounded-2xl mt-8 backdrop-blur-sm">
-        <div class="border-t border-blue-700 pt-4">
-          <p class="text-center text-blue-200 text-xs"> Die auf dieser Seite bereitgestellten Anlageinformationen dienen ausschließlich Bildungszwecken. <a class="text-green-300 underline font-medium hover:text-green-200 transition-colors" href="advertising-disclosure.html" rel="noopener" target="_blank">Mehr erfahren</a>. </p>
-</div>
+    </div>
+    <div class="bg-blue-950 bg-opacity-40 p-5 rounded-2xl mt-8 backdrop-blur-sm">
+      <div class="border-t border-blue-700 pt-4">
+        <p class="text-center text-blue-200 text-xs"> Die auf dieser Seite bereitgestellten Anlageinformationen dienen
+          ausschließlich Bildungszwecken. <a
+            class="text-green-300 underline font-medium hover:text-green-200 transition-colors"
+            href="advertising-disclosure.html" rel="noopener" target="_blank">Mehr erfahren</a>. </p>
       </div>
-      </div>
-    </section>
-    <style>
-      .hero-gradient-bg {
-        background: linear-gradient(135deg, #1a365d 0%, #2d3748 50%, #2c5282 100%);
+    </div>
+    </div>
+  </section>
+  <style>
+    .hero-gradient-bg {
+      background: linear-gradient(135deg, #1a365d 0%, #2d3748 50%, #2c5282 100%);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .cta-button {
+      background: linear-gradient(90deg, #16a34a 0%, #22c55e 100%);
+      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
+    }
+
+    .glow-effect {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glow-effect::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+      transform: rotate(30deg);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .glow-effect:hover::after {
+      opacity: 1;
+    }
+
+    .hero-highlight {
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #16a34a, transparent);
+      border-radius: 3px;
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 0.6;
       }
 
-      .glass-card {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .cta-button {
-        background: linear-gradient(90deg, #16a34a 0%, #22c55e 100%);
-        box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
-      }
-
-      .cta-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
-      }
-
-      .glow-effect {
-        position: relative;
-        overflow: hidden;
-      }
-
-      .glow-effect::after {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
-        transform: rotate(30deg);
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-
-      .glow-effect:hover::after {
+      50% {
         opacity: 1;
       }
 
-      .hero-highlight {
-        position: relative;
-        display: inline-block;
+      100% {
+        opacity: 0.6;
       }
+    }
 
-      .hero-highlight::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: linear-gradient(90deg, transparent, #16a34a, transparent);
-        border-radius: 3px;
-      }
+    .animate-pulse {
+      animation: pulse 2s infinite;
+    }
+  </style>
+  <style>
+    .feature-card {
+      transition: all 0.3s ease;
+    }
 
-      @keyframes pulse {
-        0% {
-          opacity: 0.6;
-        }
+    .feature-card:hover {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
 
-        50% {
-          opacity: 1;
-        }
+    .icon-wrapper {
+      transition: transform 0.3s ease;
+    }
 
-        100% {
-          opacity: 0.6;
-        }
-      }
-
-      .animate-pulse {
-        animation: pulse 2s infinite;
-      }
-    </style>
-    <style>
-      .feature-card {
-        transition: all 0.3s ease;
-      }
-
-      .feature-card:hover {
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      }
-
-      .icon-wrapper {
-        transition: transform 0.3s ease;
-      }
-
-      .feature-card:hover .icon-wrapper {
-        transform: scale(1.1);
-      }
-    </style>
-    <!-- Benefits Section Rediseñada -->
-    <section class="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
-      <div class="container mx-auto max-w-6xl">
-        <div class="text-center mb-16">
-          <span class="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4"> INVESTMENTSTRATEGIE </span>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Entdecken Sie eine Trading-Plattform</h2>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto">Erkunden Sie die Funktionen einer Trading-Plattform</p>
-</div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Benefit 1 -->
-          <div class="benefit-card group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200">
-            <div class="flex items-center mb-5">
-              <div class="icon-container bg-blue-100 p-3 rounded-xl mr-4 group-hover:bg-blue-200 transition-colors">
-                <i class="fas fa-balance-scale text-blue-600 text-xl"></i>
-              </div>
-                <h3 class="text-xl font-semibold text-gray-900">Umfassende Vergleiche</h3>
-              </div>
-              <p class="text-gray-600">Finden Sie die perfekte Kombination durch klare und direkt vergleichbare Bewertungen, die auf Ihre Anlageziele zugeschnitten sind.</p>
-              <div class="mt-4 pt-4 border-t border-gray-100">
-                <span class="text-xs text-blue-600 font-medium">Multi-Markt-Analyse</span>
-</div>
+    .feature-card:hover .icon-wrapper {
+      transform: scale(1.1);
+    }
+  </style>
+  <!-- Benefits Section Rediseñada -->
+  <section class="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-16">
+        <span class="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+          INVESTMENTSTRATEGIE </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Entdecken Sie eine Trading-Plattform</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">Erkunden Sie die Funktionen einer Trading-Plattform</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Benefit 1 -->
+        <div
+          class="benefit-card group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200">
+          <div class="flex items-center mb-5">
+            <div class="icon-container bg-blue-100 p-3 rounded-xl mr-4 group-hover:bg-blue-200 transition-colors">
+              <i class="fas fa-balance-scale text-blue-600 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Umfassende Vergleiche</h3>
           </div>
-          <!-- Benefit 2 -->
-          <div class="benefit-card group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200">
-            <div class="flex items-center mb-5">
-              <div class="icon-container bg-green-100 p-3 rounded-xl mr-4 group-hover:bg-green-200 transition-colors">
-                <i class="fas fa-euro-sign text-green-600 text-xl"></i>
-              </div>
-                <h3 class="text-xl font-semibold text-gray-900">Kostengünstige Lösungen</h3>
-              </div>
-              <p class="text-gray-600">Entdecken Sie Broker mit wettbewerbsfähigen Provisionen.</p>
-              <div class="mt-4 pt-4 border-t border-gray-100">
-                <span class="text-xs text-green-600 font-medium">Optimierte Gebühren</span>
-              </div>
-              <p class="text-xs text-gray-500 mt-3">*Bitte beachten Sie, dass die genannten Bedingungen je nach Anbieter variieren können.</p>
-</div>
-          <!-- Benefit 3 -->
-          <div class="benefit-card group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-200">
-            <div class="flex items-center mb-5">
-              <div class="icon-container bg-purple-100 p-3 rounded-xl mr-4 group-hover:bg-purple-200 transition-colors">
-                <i class="fas fa-globe text-purple-600 text-xl"></i>
-              </div>
-                <h3 class="text-xl font-semibold text-gray-900">Globaler Zugang</h3>
-              </div>
-              <p class="text-gray-600">Erweitern Sie Ihr Portfolio mit Brokern, die Ihnen Zugang zu wichtigen internationalen Börsen bieten.</p>
-              <div class="mt-4 pt-4 border-t border-gray-100">
-                <span class="text-xs text-purple-600 font-medium">Globale Märkte</span>
-</div>
-          </div>
-          <!-- Benefit 4 -->
-          <div class="benefit-card group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-red-200">
-            <div class="flex items-center mb-5">
-              <div class="icon-container bg-red-100 p-3 rounded-xl mr-4 group-hover:bg-red-200 transition-colors">
-                <i class="fas fa-shield-alt text-red-600 text-xl"></i>
-              </div>
-                <h3 class="text-xl font-semibold text-gray-900">Sicheres Umfeld</h3>
-              </div>
-              <p class="text-gray-600">Handeln Sie vertrauensvoll auf Plattformen, die von Finanzaufsichtsbehörden überwacht werden.</p>
-              <div class="mt-4 pt-4 border-t border-gray-100">
-                <span class="text-xs text-red-600 font-medium">Strenge Regulierung</span>
-</div>
-          </div>
-          <!-- Benefit 5 -->
-          <div class="benefit-card group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-orange-200">
-            <div class="flex items-center mb-5">
-              <div class="icon-container bg-orange-100 p-3 rounded-xl mr-4 group-hover:bg-orange-200 transition-colors">
-                <i class="fas fa-graduation-cap text-orange-600 text-xl"></i>
-              </div>
-                <h3 class="text-xl font-semibold text-gray-900">Bildungsressourcen</h3>
-              </div>
-              <p class="text-gray-600">Verbessern Sie Ihre Fähigkeiten mit Lernmaterialien und Marktanalysen für alle Niveaus.</p>
-              <div class="mt-4 pt-4 border-t border-gray-100">
-                <span class="text-xs text-orange-600 font-medium">Fortlaufende Ausbildung</span>
-</div>
-          </div>
-          <!-- Benefit 6 -->
-          <div class="benefit-card group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-indigo-200">
-            <div class="flex items-center mb-5">
-              <div class="icon-container bg-indigo-100 p-3 rounded-xl mr-4 group-hover:bg-indigo-200 transition-colors">
-                <i class="fas fa-copy text-indigo-600 text-xl"></i>
-              </div>
-                <h3 class="text-xl font-semibold text-gray-900">Copy-Trading</h3>
-              </div>
-              <p class="text-gray-600">Entdecken Sie die auf einigen Plattformen verfügbaren Copy-Trading-Funktionen.</p>
-              <div class="mt-4 pt-4 border-t border-gray-100">
-                <span class="text-xs text-indigo-600 font-medium">Praktisches Lernen</span>
-</div>
+          <p class="text-gray-600">Finden Sie die perfekte Kombination durch klare und direkt vergleichbare Bewertungen,
+            die auf Ihre Anlageziele zugeschnitten sind.</p>
+          <div class="mt-4 pt-4 border-t border-gray-100">
+            <span class="text-xs text-blue-600 font-medium">Multi-Markt-Analyse</span>
           </div>
         </div>
-        <!-- Legal Note -->
-        <div class="mt-8 text-center">
-          <p class="text-sm text-gray-500">*Vergangene Performance ist kein Indikator für zukünftige Ergebnisse. Trading birgt Risiken.</p>
-</div>
-      </div>
-    </section>
-    <style>
-      .benefit-card {
-        transition: all 0.3s ease;
-      }
-
-      .benefit-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .icon-container {
-        transition: all 0.3s ease;
-      }
-
-      .benefit-card:hover .icon-container {
-        transform: rotate(5deg) scale(1.1);
-      }
-    </style>
-    <!-- Footer Links -->
-    <footer class="bg-gray-100 py-8 px-4">
-      <div class="container mx-auto max-w-6xl">
-        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
-          <a class="text-gray-600 hover:text-blue-600" href="privacy-policy.html">Datenschutzrichtlinie</a>
-          <a class="text-gray-600 hover:text-blue-600" href="terms-and-conditions.html">Allgemeine Geschäftsbedingungen</a>
-          <a class="text-gray-600 hover:text-blue-600" href="cookie-policy.html">Cookie-Richtlinie</a>
-</div>
-        <div class="text-center text-gray-500 text-sm mb-8">
-          <p>© <span class="current-year"></span> Alle Rechte vorbehalten. </p>
-</div>
-        <div class="bg-grey p-6 rounded-lg shadow-sm text-s">
-          <h3 class="font-bold text-gray-800 mb-4 text-center">*Avertissement*Attention ! Ce site web utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre utilisation des cookies. [Plus d'informations]</h3>
-          <p class="text-gray-600 mb-4">Le commerce et les investissements comportent des risques. Chaque montant de gain, pourcentage, taux de réussite ou référence de revenus marqué d'un astérisque (*) à titre d'exemple est uniquement à but illustratif, repose sur des tests limités ou des expériences individuelles et ne représente pas un résultat typique ou garanti. Les performances passées ne sont pas indicatives des résultats futurs ; vous pouvez perdre tout ou partie de votre capital. Rien sur cette page ne constitue un conseil financier. Consultez un professionnel qualifié avant d'investir. Les utilisateurs doivent être âgés d'au moins 18 ans.</p>
-          <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Propriété de l'entreprise et objectif du site web</h3>
-          <p class="text-gray-600 mb-4">Ce site web, elitewealthplanner.com, est exploité par Prime Growth Funds, une entreprise de marketing digital et de génération de leads. Son objectif principal est de mettre en relation des utilisateurs intéressés avec des fournisseurs externes de services financiers, y compris des courtiers agréés, via du contenu promotionnel illustrant des services potentiels.</p>
-          <p class="text-gray-600 mb-4">Nous ne proposons pas directement de produits ou services financiers. Nous ne sommes pas des courtiers, des conseillers financiers ou une institution financière agréée, et nous n'effectuons pas de transactions. Notre rôle est de faciliter la connexion entre les utilisateurs et nos plateformes partenaires agréées, qui peuvent proposer ces services de manière indépendante.</p>
-          <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Divulgation publicitaire</h3>
-          <p class="text-gray-600 mb-4">Ce site web est une ressource gratuite conçue pour aider les utilisateurs à explorer des opportunités financières. Nous pouvons recevoir une compensation publicitaire des entreprises tierces présentées ici. Cette compensation peut influencer la localisation ou la présentation des offres, sans affecter notre engagement à fournir des informations précises et utiles.</p>
-          <p class="text-gray-600 mb-4">La présence de courtiers ou de plateformes tierces n'implique pas d'approbation et nous ne prétendons pas énumérer tous les fournisseurs sur le marché.</p>
-          <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Modèle de génération de prospects</h3>
-          <p class="text-gray-600 mb-4">Lorsque les utilisateurs fournissent leur nom, numéro de téléphone ou adresse e-mail, ces informations peuvent être transmises de manière sécurisée à une ou plusieurs plateformes partenaires vérifiées, qui pourront ensuite les contacter.</p>
-          <p class="text-gray-600 mb-4">En soumettant vos données, vous acceptez expressément d'être contacté par téléphone, courriel ou SMS, même si votre numéro est inscrit sur une liste d'exclusion téléphonique. Vous pouvez annuler la réception à tout moment.</p>
-          <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Avertissement sur les risques d'investissement</h3>
-          <p class="text-gray-600 mb-4">La participation aux marchés financiers (Forex, cryptomonnaies, CFD, actions, etc.) comporte des risques importants et ne convient pas à tous. Il n'existe aucune garantie de gains ; vous pourriez perdre l'intégralité du capital investi. N'investissez que l'argent dont vous pouvez vous permettre la perte.</p>
-          <p class="text-gray-600 mb-4">Les performances passées ne préjugent pas des résultats futurs. Avant de prendre une décision, évaluez votre situation financière et consultez un conseiller financier certifié si nécessaire.</p>
-          <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Absence de conseil financier ou juridique</h3>
-          <p class="text-gray-600 mb-4">Le contenu de https://eliteweaalthplanner.com/ est fourni uniquement à des fins informatives et éducatives ; il ne constitue pas un conseil juridique, financier, fiscal ou en investissement. Toute décision prise sur la bases de ces informations relève de la seule responsabilité de l'utilisateur.</p>
-          <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Absence de garanties</h3>
-          <p class="text-gray-600 mb-4">Bien que nous nous efforçons de maintenir nos informations précises et à jour, nous ne pouvons pas garantir leur intégralité, exactitude ou actualité. Les prix, offres et conditions peuvent changer sans préavis. Prime Growth Funds n'assume aucune garantie, expresse ou implicite.</p>
-          <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Limitation de responsabilité</h3>
-          <p class="text-gray-600 mb-4">Prime Growth Funds, ainsi que son équipe, propriétaires, partenaires et entreprises affiliées, ne seront pas responsables des dommages directs ou indirects résultant de l'utilisation du site web ou de l'impossibilité de l'utiliser.</p>
-          <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Lien vers des tiers</h3>
-          <p class="text-gray-600 mb-4">Ce site web peut contenir des liens vers des sites web tiers. Nous ne sommes pas responsables de leurs contenus, ne les approuvons pas et n'assumons aucune responsabilité quant à leur exactitude ou fiabilité. L'interaction avec ces tiers se fait à vos propres risques.</p>
-          <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Modifications de la notification</h3>
-          <p class="text-gray-600 mb-4">Ce message peut être modifié à tout moment et sans préavis. Il est de votre responsabilité de vérifier régulièrement les changements. L'utilisation continue du site web sera considérée comme une acceptation de ceux-ci.</p>
-          <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Droit applicable</h3>
-          <p class="text-gray-600">Cette communication et votre utilisation du site web sont soumises aux lois applicables dans votre juridiction. Tout litige sera résolu exclusivement devant les tribunaux compétents du siège d'enregistrement de Prime Growth Funds.</p>
+        <!-- Benefit 2 -->
+        <div
+          class="benefit-card group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200">
+          <div class="flex items-center mb-5">
+            <div class="icon-container bg-green-100 p-3 rounded-xl mr-4 group-hover:bg-green-200 transition-colors">
+              <i class="fas fa-euro-sign text-green-600 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Kostengünstige Lösungen</h3>
+          </div>
+          <p class="text-gray-600">Entdecken Sie Broker mit wettbewerbsfähigen Provisionen.</p>
+          <div class="mt-4 pt-4 border-t border-gray-100">
+            <span class="text-xs text-green-600 font-medium">Optimierte Gebühren</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-3">*Bitte beachten Sie, dass die genannten Bedingungen je nach Anbieter
+            variieren können.</p>
+        </div>
+        <!-- Benefit 3 -->
+        <div
+          class="benefit-card group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-200">
+          <div class="flex items-center mb-5">
+            <div class="icon-container bg-purple-100 p-3 rounded-xl mr-4 group-hover:bg-purple-200 transition-colors">
+              <i class="fas fa-globe text-purple-600 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Globaler Zugang</h3>
+          </div>
+          <p class="text-gray-600">Erweitern Sie Ihr Portfolio mit Brokern, die Ihnen Zugang zu wichtigen
+            internationalen Börsen bieten.</p>
+          <div class="mt-4 pt-4 border-t border-gray-100">
+            <span class="text-xs text-purple-600 font-medium">Globale Märkte</span>
+          </div>
+        </div>
+        <!-- Benefit 4 -->
+        <div
+          class="benefit-card group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-red-200">
+          <div class="flex items-center mb-5">
+            <div class="icon-container bg-red-100 p-3 rounded-xl mr-4 group-hover:bg-red-200 transition-colors">
+              <i class="fas fa-shield-alt text-red-600 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Sicheres Umfeld</h3>
+          </div>
+          <p class="text-gray-600">Handeln Sie vertrauensvoll auf Plattformen, die von Finanzaufsichtsbehörden überwacht
+            werden.</p>
+          <div class="mt-4 pt-4 border-t border-gray-100">
+            <span class="text-xs text-red-600 font-medium">Strenge Regulierung</span>
+          </div>
+        </div>
+        <!-- Benefit 5 -->
+        <div
+          class="benefit-card group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-orange-200">
+          <div class="flex items-center mb-5">
+            <div class="icon-container bg-orange-100 p-3 rounded-xl mr-4 group-hover:bg-orange-200 transition-colors">
+              <i class="fas fa-graduation-cap text-orange-600 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Bildungsressourcen</h3>
+          </div>
+          <p class="text-gray-600">Verbessern Sie Ihre Fähigkeiten mit Lernmaterialien und Marktanalysen für alle
+            Niveaus.</p>
+          <div class="mt-4 pt-4 border-t border-gray-100">
+            <span class="text-xs text-orange-600 font-medium">Fortlaufende Ausbildung</span>
+          </div>
+        </div>
+        <!-- Benefit 6 -->
+        <div
+          class="benefit-card group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-indigo-200">
+          <div class="flex items-center mb-5">
+            <div class="icon-container bg-indigo-100 p-3 rounded-xl mr-4 group-hover:bg-indigo-200 transition-colors">
+              <i class="fas fa-copy text-indigo-600 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Copy-Trading</h3>
+          </div>
+          <p class="text-gray-600">Entdecken Sie die auf einigen Plattformen verfügbaren Copy-Trading-Funktionen.</p>
+          <div class="mt-4 pt-4 border-t border-gray-100">
+            <span class="text-xs text-indigo-600 font-medium">Praktisches Lernen</span>
+          </div>
         </div>
       </div>
-    </footer>
-    <!-- Mobile Sticky Button -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-green-600 text-white text-center py-4 shadow-lg z-50">
-      <a class="font-bold text-lg block" href="https://go.strategicassetway.com/action/1" target="_blank">
-        <i class="fas fa-arrow-right mr-2"></i>Commencer maintenant </a>
+      <!-- Legal Note -->
+      <div class="mt-8 text-center">
+        <p class="text-sm text-gray-500">*Vergangene Performance ist kein Indikator für zukünftige Ergebnisse. Trading
+          birgt Risiken.</p>
+      </div>
     </div>
-    <!-- Después de <script src="brands.js"></script> -->
-    <script src="geos.js"></script>
-    <script>
-      // Configuración de fecha y año
-      const now = new Date();
-      const options = {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      };
-      document.getElementById('fechaCompleta').textContent = now.toLocaleDateString('fr-FR', options);
-      document.querySelectorAll('.current-year').forEach(el => {
-        el.textContent = now.getFullYear();
+  </section>
+  <style>
+    .benefit-card {
+      transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon-container {
+      transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover .icon-container {
+      transform: rotate(5deg) scale(1.1);
+    }
+  </style>
+  <!-- Footer Links -->
+  <footer class="bg-gray-100 py-8 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
+        <a class="text-gray-600 hover:text-blue-600" href="privacy-policy.html">Datenschutzrichtlinie</a>
+        <a class="text-gray-600 hover:text-blue-600" href="terms-and-conditions.html">Allgemeine
+          Geschäftsbedingungen</a>
+        <a class="text-gray-600 hover:text-blue-600" href="cookie-policy.html">Cookie-Richtlinie</a>
+      </div>
+      <div class="text-center text-gray-500 text-sm mb-8">
+        <p>© <span class="current-year"></span> Alle Rechte vorbehalten. </p>
+      </div>
+      <div class="bg-grey p-6 rounded-lg shadow-sm text-s">
+        <h3 class="font-bold text-gray-800 mb-4 text-center">*Avertissement*Attention ! Ce site web utilise des cookies
+          pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre utilisation des cookies. [Plus
+          d'informations]</h3>
+        <p class="text-gray-600 mb-4">Le commerce et les investissements comportent des risques. Chaque montant de gain,
+          pourcentage, taux de réussite ou référence de revenus marqué d'un astérisque (*) à titre d'exemple est
+          uniquement à but illustratif, repose sur des tests limités ou des expériences individuelles et ne représente
+          pas un résultat typique ou garanti. Les performances passées ne sont pas indicatives des résultats futurs ;
+          vous pouvez perdre tout ou partie de votre capital. Rien sur cette page ne constitue un conseil financier.
+          Consultez un professionnel qualifié avant d'investir. Les utilisateurs doivent être âgés d'au moins 18 ans.
+        </p>
+        <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Propriété de l'entreprise et objectif du site web</h3>
+        <p class="text-gray-600 mb-4">Ce site web, elitewealthplanner.com, est exploité par Prime Growth Funds, une
+          entreprise de marketing digital et de génération de leads. Son objectif principal est de mettre en relation
+          des utilisateurs intéressés avec des fournisseurs externes de services financiers, y compris des courtiers
+          agréés, via du contenu promotionnel illustrant des services potentiels.</p>
+        <p class="text-gray-600 mb-4">Nous ne proposons pas directement de produits ou services financiers. Nous ne
+          sommes pas des courtiers, des conseillers financiers ou une institution financière agréée, et nous
+          n'effectuons pas de transactions. Notre rôle est de faciliter la connexion entre les utilisateurs et nos
+          plateformes partenaires agréées, qui peuvent proposer ces services de manière indépendante.</p>
+        <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Divulgation publicitaire</h3>
+        <p class="text-gray-600 mb-4">Ce site web est une ressource gratuite conçue pour aider les utilisateurs à
+          explorer des opportunités financières. Nous pouvons recevoir une compensation publicitaire des entreprises
+          tierces présentées ici. Cette compensation peut influencer la localisation ou la présentation des offres, sans
+          affecter notre engagement à fournir des informations précises et utiles.</p>
+        <p class="text-gray-600 mb-4">La présence de courtiers ou de plateformes tierces n'implique pas d'approbation et
+          nous ne prétendons pas énumérer tous les fournisseurs sur le marché.</p>
+        <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Modèle de génération de prospects</h3>
+        <p class="text-gray-600 mb-4">Lorsque les utilisateurs fournissent leur nom, numéro de téléphone ou adresse
+          e-mail, ces informations peuvent être transmises de manière sécurisée à une ou plusieurs plateformes
+          partenaires vérifiées, qui pourront ensuite les contacter.</p>
+        <p class="text-gray-600 mb-4">En soumettant vos données, vous acceptez expressément d'être contacté par
+          téléphone, courriel ou SMS, même si votre numéro est inscrit sur une liste d'exclusion téléphonique. Vous
+          pouvez annuler la réception à tout moment.</p>
+        <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Avertissement sur les risques d'investissement</h3>
+        <p class="text-gray-600 mb-4">La participation aux marchés financiers (Forex, cryptomonnaies, CFD, actions,
+          etc.) comporte des risques importants et ne convient pas à tous. Il n'existe aucune garantie de gains ; vous
+          pourriez perdre l'intégralité du capital investi. N'investissez que l'argent dont vous pouvez vous permettre
+          la perte.</p>
+        <p class="text-gray-600 mb-4">Les performances passées ne préjugent pas des résultats futurs. Avant de prendre
+          une décision, évaluez votre situation financière et consultez un conseiller financier certifié si nécessaire.
+        </p>
+        <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Absence de conseil financier ou juridique</h3>
+        <p class="text-gray-600 mb-4">Le contenu de https://eliteweaalthplanner.com/ est fourni uniquement à des fins
+          informatives et éducatives ; il ne constitue pas un conseil juridique, financier, fiscal ou en investissement.
+          Toute décision prise sur la bases de ces informations relève de la seule responsabilité de l'utilisateur.</p>
+        <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Absence de garanties</h3>
+        <p class="text-gray-600 mb-4">Bien que nous nous efforçons de maintenir nos informations précises et à jour,
+          nous ne pouvons pas garantir leur intégralité, exactitude ou actualité. Les prix, offres et conditions peuvent
+          changer sans préavis. Prime Growth Funds n'assume aucune garantie, expresse ou implicite.</p>
+        <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Limitation de responsabilité</h3>
+        <p class="text-gray-600 mb-4">Prime Growth Funds, ainsi que son équipe, propriétaires, partenaires et
+          entreprises affiliées, ne seront pas responsables des dommages directs ou indirects résultant de l'utilisation
+          du site web ou de l'impossibilité de l'utiliser.</p>
+        <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Lien vers des tiers</h3>
+        <p class="text-gray-600 mb-4">Ce site web peut contenir des liens vers des sites web tiers. Nous ne sommes pas
+          responsables de leurs contenus, ne les approuvons pas et n'assumons aucune responsabilité quant à leur
+          exactitude ou fiabilité. L'interaction avec ces tiers se fait à vos propres risques.</p>
+        <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Modifications de la notification</h3>
+        <p class="text-gray-600 mb-4">Ce message peut être modifié à tout moment et sans préavis. Il est de votre
+          responsabilité de vérifier régulièrement les changements. L'utilisation continue du site web sera considérée
+          comme une acceptation de ceux-ci.</p>
+        <h3 class="font-bold text-gray-800 mb-4 mt-6 text-center">Droit applicable</h3>
+        <p class="text-gray-600">Cette communication et votre utilisation du site web sont soumises aux lois applicables
+          dans votre juridiction. Tout litige sera résolu exclusivement devant les tribunaux compétents du siège
+          d'enregistrement de Prime Growth Funds.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Mobile Sticky Button -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 bg-green-600 text-white text-center py-4 shadow-lg z-50">
+    <a class="font-bold text-lg block" href="https://go.strategicassetway.com/action/1" target="_blank">
+      <i class="fas fa-arrow-right mr-2"></i>Commencer maintenant </a>
+  </div>
+  <!-- Después de <script src="brands.js"></script> -->
+  <script src="geos.js"></script>
+  <script>
+    // Configuración de fecha y año
+    const now = new Date();
+    const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    };
+    document.getElementById('fechaCompleta').textContent = now.toLocaleDateString('fr-FR', options);
+    document.querySelectorAll('.current-year').forEach(el => {
+      el.textContent = now.getFullYear();
+    });
+    // Lógica para marcas y países
+    document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      // 1. Manejar marca (kw)
+      const requestedKW = (urlParams.get('kw') || '').toLowerCase().replace(/-/g, ' ');
+      const selectedBrand = ALLOWED_BRANDS.find(brand => brand.toLowerCase() === requestedKW) || DEFAULT_BRAND;
+      document.querySelectorAll('[id^="dynamic-brand"], .dynamic-brand').forEach(el => {
+        el.textContent = selectedBrand;
       });
-      // Lógica para marcas y países
-      document.addEventListener('DOMContentLoaded', function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        // 1. Manejar marca (kw)
-        const requestedKW = (urlParams.get('kw') || '').toLowerCase().replace(/-/g, ' ');
-        const selectedBrand = ALLOWED_BRANDS.find(brand => brand.toLowerCase() === requestedKW) || DEFAULT_BRAND;
-        document.querySelectorAll('[id^="dynamic-brand"], .dynamic-brand').forEach(el => {
-          el.textContent = selectedBrand;
-        });
-        // 2. Manejar país (geo)
-        const requestedGeo = urlParams.get('geo') || DEFAULT_GEO;
-        const countryName = getCountryName(requestedGeo);
-        document.querySelectorAll('[id^="dynamic-country"], .dynamic-country').forEach(el => {
-          el.textContent = countryName;
-        });
+      // 2. Manejar país (geo)
+      const requestedGeo = urlParams.get('geo') || DEFAULT_GEO;
+      const countryName = getCountryName(requestedGeo);
+      document.querySelectorAll('[id^="dynamic-country"], .dynamic-country').forEach(el => {
+        el.textContent = countryName;
       });
-    </script>
-    <!-- Cargar lista blanca de marcas -->
-    <script src="brands.js"></script>
+    });
+  </script>
+  <!-- Cargar lista blanca de marcas -->
+  <script src="brands.js"></script>
   <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
 </body>undefined
+<!-- FF Pro Page Defaults -->
+<script>
+  var fluxDefaults = {
+    p: "3bEY9uxrKGgQ",
+    f: "3bETCMZFk6ST"
+  }
+</script>
+<!-- FF Pro Universal Tag -->
+<script>!function (f, l, u, x, j, s, a, b) { window.flux || (j = "undefined" != typeof fluxOptions ? fluxOptions : {}, s = "undefined" != typeof fluxDefaults ? fluxDefaults : {}, (a = l.createElement("script")).src = "https://" + u + "/integration/lumetricv2.min.js?v=" + x, a.type = "text/javascript", a.async = "true", queue = [], window.flux = { track: function () { queue.push(arguments) } }, a.onload = a.onreadystatechange = function () { var rs = this.readyState; if (!rs || "complete" == rs || "loaded" == rs) try { for (window.flux = new Lumetric(u, x, j, s); 0 != queue.length;) { var args = queue.pop(); window.flux.track.apply(null, args) } } catch (e) { } }, (b = document.getElementsByTagName("script")[0]).parentNode.insertBefore(a, b)) }(window, document, "go.worldwidetopbrokers.com", "3.3.0");</script>
+
+<!-- FF Pro View Event -->
+<script>
+  flux.track("view")
+</script>
+
 </html>
